@@ -140,12 +140,12 @@ namespace DoAn
 
         private void btnQuanLyVeAn_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new FormQuanLyVeAn(), sender);
         }
 
         private void btnBaoCaoThongKe_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new FormBaoCaoThongKe(), sender);
         }
 
         private void btnCloseChildForm_Click(object sender, EventArgs e)
@@ -273,13 +273,24 @@ namespace DoAn
 
         private void guna2Button1_Click_1(object sender, EventArgs e)
         {
-            OpenChildForm(new FormQuanLyChi(), sender);
+            ActivateButton(btnQuanLyThu);
+            Form childForm = new FormQuanLyThu();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.panelDesktopPane.Controls.Add(childForm);
+            this.panelDesktopPane.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            labelTitle.Text = childForm.Text;
+            btnCloseChildForm.Visible = true;
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            ActivateButton(btnQuanLyThu);
-            Form childForm = new FormQuanLyThu();
+            ActivateButton(btnQuanLyChi);
+            Form childForm = new FormQuanLyChi();
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;

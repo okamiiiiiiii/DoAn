@@ -19,8 +19,25 @@ namespace DoAn
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Form TKC = new FormThemKhoanChi();
-            TKC.Show();
+            //Form TKC = new FormThemKhoanChi();
+            //TKC.Show();
+        }
+
+        private void FormQuanLyChi_Load(object sender, EventArgs e)
+        {
+            foreach (Control btns in this.Controls)
+            {
+                if (btns.GetType() == typeof(Button))
+                {
+                    Button btn = (Button)btns;
+                    btn.BackColor = ThemeColor.PrimaryColor;
+                    btn.ForeColor = Color.White;
+                    btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                }
+            }
+            groupBox1.ForeColor = ThemeColor.PrimaryColor;
+
+            guna2DataGridView1.DataSource = DataController.ExecTable("SELECT tentienchi, thanhtien from tttienchi");
         }
     }
 }
