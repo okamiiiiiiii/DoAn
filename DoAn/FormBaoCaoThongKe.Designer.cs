@@ -70,8 +70,9 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(856, 44);
+            this.panel1.Size = new System.Drawing.Size(1141, 54);
             this.panel1.TabIndex = 0;
             // 
             // button4
@@ -81,9 +82,10 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(654, 0);
+            this.button4.Location = new System.Drawing.Point(873, 0);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(202, 44);
+            this.button4.Size = new System.Drawing.Size(268, 54);
             this.button4.TabIndex = 3;
             this.button4.Text = "Báo cáo thống kê doanh thu";
             this.button4.UseVisualStyleBackColor = true;
@@ -96,9 +98,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(436, 0);
+            this.button3.Location = new System.Drawing.Point(582, 0);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(218, 44);
+            this.button3.Size = new System.Drawing.Size(291, 54);
             this.button3.TabIndex = 2;
             this.button3.Text = "Báo cáo thống kê học liệu";
             this.button3.UseVisualStyleBackColor = true;
@@ -111,9 +114,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(218, 0);
+            this.button2.Location = new System.Drawing.Point(291, 0);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(218, 44);
+            this.button2.Size = new System.Drawing.Size(291, 54);
             this.button2.TabIndex = 1;
             this.button2.Text = "Báo cáo thống kê thu";
             this.button2.UseVisualStyleBackColor = true;
@@ -127,8 +131,9 @@
             this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(218, 44);
+            this.button1.Size = new System.Drawing.Size(291, 54);
             this.button1.TabIndex = 0;
             this.button1.Tag = "";
             this.button1.Text = "Báo cáo thống kê chi";
@@ -141,11 +146,12 @@
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.button5);
             this.panel2.ForeColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(0, 44);
-            this.panel2.MaximumSize = new System.Drawing.Size(218, 25);
-            this.panel2.MinimumSize = new System.Drawing.Size(218, 0);
+            this.panel2.Location = new System.Drawing.Point(0, 54);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.MaximumSize = new System.Drawing.Size(291, 31);
+            this.panel2.MinimumSize = new System.Drawing.Size(291, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(218, 25);
+            this.panel2.Size = new System.Drawing.Size(291, 31);
             this.panel2.TabIndex = 4;
             // 
             // button7
@@ -155,9 +161,10 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(146, 0);
+            this.button7.Location = new System.Drawing.Point(194, 0);
+            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(72, 25);
+            this.button7.Size = new System.Drawing.Size(97, 31);
             this.button7.TabIndex = 2;
             this.button7.Text = "Theo năm";
             this.button7.UseVisualStyleBackColor = true;
@@ -170,9 +177,10 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(73, 0);
+            this.button6.Location = new System.Drawing.Point(97, 0);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(73, 25);
+            this.button6.Size = new System.Drawing.Size(97, 31);
             this.button6.TabIndex = 1;
             this.button6.Text = "Theo quý";
             this.button6.UseVisualStyleBackColor = true;
@@ -186,8 +194,9 @@
             this.button5.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Location = new System.Drawing.Point(0, 0);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(73, 25);
+            this.button5.Size = new System.Drawing.Size(97, 31);
             this.button5.TabIndex = 0;
             this.button5.Text = "Theo tháng";
             this.button5.UseVisualStyleBackColor = true;
@@ -199,11 +208,12 @@
             this.panel3.Controls.Add(this.button9);
             this.panel3.Controls.Add(this.button10);
             this.panel3.ForeColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(218, 44);
-            this.panel3.MaximumSize = new System.Drawing.Size(218, 25);
-            this.panel3.MinimumSize = new System.Drawing.Size(218, 0);
+            this.panel3.Location = new System.Drawing.Point(291, 54);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.MaximumSize = new System.Drawing.Size(291, 31);
+            this.panel3.MinimumSize = new System.Drawing.Size(291, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(218, 25);
+            this.panel3.Size = new System.Drawing.Size(291, 31);
             this.panel3.TabIndex = 5;
             // 
             // button8
@@ -213,9 +223,10 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(146, 0);
+            this.button8.Location = new System.Drawing.Point(194, 0);
+            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(72, 25);
+            this.button8.Size = new System.Drawing.Size(97, 31);
             this.button8.TabIndex = 2;
             this.button8.Text = "Theo năm";
             this.button8.UseVisualStyleBackColor = true;
@@ -228,9 +239,10 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(73, 0);
+            this.button9.Location = new System.Drawing.Point(97, 0);
+            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(73, 25);
+            this.button9.Size = new System.Drawing.Size(97, 31);
             this.button9.TabIndex = 1;
             this.button9.Text = "Theo quý";
             this.button9.UseVisualStyleBackColor = true;
@@ -244,8 +256,9 @@
             this.button10.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.White;
             this.button10.Location = new System.Drawing.Point(0, 0);
+            this.button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(73, 25);
+            this.button10.Size = new System.Drawing.Size(97, 31);
             this.button10.TabIndex = 0;
             this.button10.Text = "Theo tháng";
             this.button10.UseVisualStyleBackColor = true;
@@ -257,11 +270,12 @@
             this.panel4.Controls.Add(this.button12);
             this.panel4.Controls.Add(this.button13);
             this.panel4.ForeColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(436, 44);
-            this.panel4.MaximumSize = new System.Drawing.Size(218, 25);
-            this.panel4.MinimumSize = new System.Drawing.Size(218, 0);
+            this.panel4.Location = new System.Drawing.Point(581, 54);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.MaximumSize = new System.Drawing.Size(291, 31);
+            this.panel4.MinimumSize = new System.Drawing.Size(291, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(218, 25);
+            this.panel4.Size = new System.Drawing.Size(291, 31);
             this.panel4.TabIndex = 6;
             // 
             // button11
@@ -271,9 +285,10 @@
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(146, 0);
+            this.button11.Location = new System.Drawing.Point(194, 0);
+            this.button11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(72, 25);
+            this.button11.Size = new System.Drawing.Size(97, 31);
             this.button11.TabIndex = 2;
             this.button11.Text = "Theo năm";
             this.button11.UseVisualStyleBackColor = true;
@@ -286,9 +301,10 @@
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(73, 0);
+            this.button12.Location = new System.Drawing.Point(97, 0);
+            this.button12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(73, 25);
+            this.button12.Size = new System.Drawing.Size(97, 31);
             this.button12.TabIndex = 1;
             this.button12.Text = "Theo quý";
             this.button12.UseVisualStyleBackColor = true;
@@ -302,8 +318,9 @@
             this.button13.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.Color.White;
             this.button13.Location = new System.Drawing.Point(0, 0);
+            this.button13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(73, 25);
+            this.button13.Size = new System.Drawing.Size(97, 31);
             this.button13.TabIndex = 0;
             this.button13.Text = "Theo tháng";
             this.button13.UseVisualStyleBackColor = true;
@@ -315,11 +332,12 @@
             this.panel5.Controls.Add(this.button15);
             this.panel5.Controls.Add(this.button16);
             this.panel5.ForeColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(654, 44);
-            this.panel5.MaximumSize = new System.Drawing.Size(218, 25);
-            this.panel5.MinimumSize = new System.Drawing.Size(202, 0);
+            this.panel5.Location = new System.Drawing.Point(872, 54);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.MaximumSize = new System.Drawing.Size(291, 31);
+            this.panel5.MinimumSize = new System.Drawing.Size(269, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(218, 25);
+            this.panel5.Size = new System.Drawing.Size(291, 31);
             this.panel5.TabIndex = 7;
             // 
             // button14
@@ -329,9 +347,10 @@
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.Color.White;
-            this.button14.Location = new System.Drawing.Point(146, 0);
+            this.button14.Location = new System.Drawing.Point(194, 0);
+            this.button14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(72, 25);
+            this.button14.Size = new System.Drawing.Size(97, 31);
             this.button14.TabIndex = 2;
             this.button14.Text = "Theo năm";
             this.button14.UseVisualStyleBackColor = true;
@@ -344,9 +363,10 @@
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.Color.White;
-            this.button15.Location = new System.Drawing.Point(73, 0);
+            this.button15.Location = new System.Drawing.Point(97, 0);
+            this.button15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(73, 25);
+            this.button15.Size = new System.Drawing.Size(97, 31);
             this.button15.TabIndex = 1;
             this.button15.Text = "Theo quý";
             this.button15.UseVisualStyleBackColor = true;
@@ -360,8 +380,9 @@
             this.button16.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button16.ForeColor = System.Drawing.Color.White;
             this.button16.Location = new System.Drawing.Point(0, 0);
+            this.button16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(73, 25);
+            this.button16.Size = new System.Drawing.Size(97, 31);
             this.button16.TabIndex = 0;
             this.button16.Text = "Theo tháng";
             this.button16.UseVisualStyleBackColor = true;
@@ -390,23 +411,25 @@
             // panel6
             // 
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 44);
+            this.panel6.Location = new System.Drawing.Point(0, 54);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(856, 553);
+            this.panel6.Size = new System.Drawing.Size(1141, 681);
             this.panel6.TabIndex = 8;
             // 
             // FormBaoCaoThongKe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(856, 597);
+            this.ClientSize = new System.Drawing.Size(1141, 735);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormBaoCaoThongKe";
             this.Text = "Báo cáo thống kê";
             this.Load += new System.EventHandler(this.FormBaoCaoThongKe_Load);

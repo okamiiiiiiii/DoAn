@@ -39,5 +39,20 @@ namespace DoAn
 
             guna2DataGridView1.DataSource = DataController.ExecTable("SELECT tentienchi, thanhtien from tttienchi");
         }
+
+        private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBox1.Text = guna2DataGridView1.CurrentRow.Cells[0].Value.ToString();
+            textBox2.Text = guna2DataGridView1.CurrentRow.Cells[1].Value.ToString();
+            comboBox1.Text = guna2DataGridView1.CurrentRow.Cells[3].Value.ToString();
+
+            textBox1.Enabled = false;
+            textBox2.Enabled = false;
+            textBox4.Enabled = false;
+            comboBox1.Enabled = false;
+
+            bt_Sua.Enabled = true;
+            bt_Xoa.Enabled = true;
+        }
     }
 }
