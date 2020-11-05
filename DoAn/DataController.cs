@@ -10,7 +10,7 @@ namespace DoAn
 {
     class DataController
     {
-        private static string connStr = @"Data Source=MINHTHIEN\SQLEXPRESS;Initial Catalog=mamnonsaoviet;Integrated Security=True";
+        private static string connStr = @"Data Source=MINHTHIEN\SQLEXPRESS;Initial Catalog=mamnonsaoviet2;Integrated Security=True";
 
         public static DataTable ExecTable(string query)
         {
@@ -21,6 +21,15 @@ namespace DoAn
             da.Dispose();
             conn.Close();
             return dt;
+        }
+
+        public static void Execute(string query)
+        {
+            SqlConnection conn = new SqlConnection(connStr);
+            SqlCommand cmd = new SqlCommand(query, conn);
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            conn.Close();
         }
     }
 }

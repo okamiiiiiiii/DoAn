@@ -53,8 +53,6 @@ namespace DoAn
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form THS = new FormThemHocSinh();
-            THS.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)

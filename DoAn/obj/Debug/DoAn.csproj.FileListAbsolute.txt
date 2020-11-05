@@ -26,8 +26,6 @@ D:\DoAn\DoAn\obj\Debug\DoAn.FormLogin.resources
 D:\DoAn\DoAn\obj\Debug\DoAn.FormQuanLyHocSinh.resources
 D:\DoAn\DoAn\obj\Debug\DoAn.FormQuanLyTaiKhoan.resources
 D:\DoAn\DoAn\obj\Debug\DoAn.FormQuanLyThu.resources
-D:\DoAn\DoAn\obj\Debug\DoAn.FormThemHocSinh.resources
-D:\DoAn\DoAn\obj\Debug\DoAn.FormThemKhoanChi.resources
 D:\DoAn\DoAn\obj\Debug\DoAn.MainForm.resources
 D:\DoAn\DoAn\obj\Debug\DoAn.Properties.Resources.resources
 D:\DoAn\DoAn\obj\Debug\DoAn.FormQuanLyChi.resources

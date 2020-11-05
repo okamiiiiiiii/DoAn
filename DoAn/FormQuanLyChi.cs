@@ -19,8 +19,9 @@ namespace DoAn
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //Form TKC = new FormThemKhoanChi();
-            //TKC.Show();
+            button1.Enabled = true;
+            button2.Enabled = false;
+            button3.Enabled = false;
         }
 
         private void FormQuanLyChi_Load(object sender, EventArgs e)
@@ -51,8 +52,9 @@ namespace DoAn
             textBox4.Enabled = false;
             comboBox1.Enabled = false;
 
-            bt_Sua.Enabled = true;
-            bt_Xoa.Enabled = true;
+            button1.Enabled = true;
+            button2.Enabled = true;
+            button3.Enabled = true;
         }
     }
 }

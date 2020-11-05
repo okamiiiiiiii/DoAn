@@ -53,10 +53,24 @@ namespace DoAn
             txt_MK.Text = guna2DataGridView1.CurrentRow.Cells[2].Value.ToString();
             cbb_VT.Text = guna2DataGridView1.CurrentRow.Cells[3].Value.ToString();
 
+            DataTable dt = DataController.ExecTable("select * from nhanvien where manv = '" + textBox1.Text + "'");
+            DataRow data = dt.Rows[0];
+
+            txt_ten.Text = data["tennv"].ToString();
+            cbb_GT.Text = data["gioitinh"].ToString();
+            dtP_Birth.Value = Convert.ToDateTime(data["namsinh"].ToString());
+            txt_SDT.Text = data["dienthoai"].ToString();
+            txt_DiaChi.Text = data["diachi"].ToString();
+
             textBox1.Enabled = false;
             txt_MK.Enabled = false;
             txt_TK.Enabled = false;
             cbb_VT.Enabled = false;
+            txt_ten.Enabled = false;
+            cbb_GT.Enabled = false;
+            dtP_Birth.Enabled = false;
+            txt_SDT.Enabled = false;
+            txt_DiaChi.Enabled = false;
 
             bt_Sua.Enabled = true;
             bt_Xoa.Enabled = true;
@@ -156,6 +170,41 @@ namespace DoAn
                 }
                 guna2DataGridView1.DataSource = DataController.ExecTable("SELECT manv, tentaikhoan, matkhau, phanquyen FROM nhanvien");
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_MK_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

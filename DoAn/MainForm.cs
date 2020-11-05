@@ -34,6 +34,7 @@ namespace DoAn
         public MainForm()
         {
             InitializeComponent();
+            DataController.Execute("exec khoitao");
             random = new Random();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
             btnCloseChildForm.Visible = false;
@@ -301,6 +302,11 @@ namespace DoAn
             childForm.Show();
             labelTitle.Text = childForm.Text;
             btnCloseChildForm.Visible = true;
+        }
+
+        private void controlPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 
