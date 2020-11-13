@@ -24,16 +24,31 @@ namespace DoAn
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtTaiKhoan.Text == "admin" && txtMatKhau.Text == "123456")
+            if (string.IsNullOrWhiteSpace(txtTaiKhoan.Text))
             {
-                Form main = new MainForm();
-                main.Show();
-                this.Hide();
+                MessageBox.Show("Chưa nhập tài khoản", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (string.IsNullOrWhiteSpace(txtMatKhau.Text))
+            {
+                MessageBox.Show("Chưa nhập mật khẩu", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                MessageBox.Show("Nhập sai tài khoản hoặc mật khẩu", "Sai thông tin");
+                DataTable dtLogin = DataController.ExecTable("select tentaikhoan, matkhau from nhanvien");
+                foreach (DataRow row in dtLogin.Rows)
+                {
+                    if (txtMatKhau.Text == row["tentaikhoan"].ToString() && txtMatKhau.Text == row["matkhau"].ToString())
+                    {
+                        LoginUser.manv = int.Parse(row["manv"].ToString());
+                        Form main = new MainForm();
+                        main.Show();
+                        this.Hide();
+                        return;
+                    }
+                }
+                MessageBox.Show("Nhập sai tài khoản hoặc mật khẩu", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            
         }
     }
 }

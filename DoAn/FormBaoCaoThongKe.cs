@@ -25,7 +25,7 @@ namespace DoAn
             childForm.Show();
             panel2.BringToFront();
             panel3.BringToFront();
-            panel4.BringToFront();
+            //panel4.BringToFront();
             panel5.BringToFront();
         }
 
@@ -51,19 +51,15 @@ namespace DoAn
             button5.BackColor = ThemeColor.PrimaryColor;
             button6.BackColor = ThemeColor.PrimaryColor;
             button7.BackColor = ThemeColor.PrimaryColor;
-            button8.BackColor = ThemeColor.PrimaryColor;
             button9.BackColor = ThemeColor.PrimaryColor;
             button10.BackColor = ThemeColor.PrimaryColor;
-            button11.BackColor = ThemeColor.PrimaryColor;
-            button12.BackColor = ThemeColor.PrimaryColor;
-            button13.BackColor = ThemeColor.PrimaryColor;
             button14.BackColor = ThemeColor.PrimaryColor;
             button15.BackColor = ThemeColor.PrimaryColor;
             button16.BackColor = ThemeColor.PrimaryColor;
 
             panel2.Size = panel2.MinimumSize;
             panel3.Size = panel3.MinimumSize;
-            panel4.Size = panel4.MinimumSize;
+            //panel4.Size = panel4.MinimumSize;
             panel5.Size = panel5.MinimumSize;
 
             OpenChildForm(new FormThongKeChiTheoThang(), sender);
@@ -116,24 +112,24 @@ namespace DoAn
 
         private void timer3_Tick(object sender, EventArgs e)
         {
-            if (!isDropped3)
-            {
-                panel4.Height += 5;
-                if (panel4.Height == panel4.MaximumSize.Height)
-                {
-                    isDropped3 = true;
-                    timer3.Stop();
-                }
-            }
-            else
-            {
-                panel4.Height -= 5;
-                if (panel4.Height == panel4.MinimumSize.Height)
-                {
-                    isDropped3 = false;
-                    timer3.Stop();
-                }
-            }
+            //if (!isDropped3)
+            //{
+            //    panel4.Height += 5;
+            //    if (panel4.Height == panel4.MaximumSize.Height)
+            //    {
+            //        isDropped3 = true;
+            //        timer3.Stop();
+            //    }
+            //}
+            //else
+            //{
+            //    panel4.Height -= 5;
+            //    if (panel4.Height == panel4.MinimumSize.Height)
+            //    {
+            //        isDropped3 = false;
+            //        timer3.Stop();
+            //    }
+            //}
         }
 
         private void timer4_Tick(object sender, EventArgs e)
@@ -164,6 +160,7 @@ namespace DoAn
             if (isDropped2) timer2.Start();
             if (isDropped3) timer3.Start();
             if (isDropped4) timer4.Start();
+            OpenChildForm(new FormThongKeChiTheoThang(), sender);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -172,6 +169,7 @@ namespace DoAn
             if (isDropped1) timer1.Start();
             if (isDropped3) timer3.Start();
             if (isDropped4) timer4.Start();
+            OpenChildForm(new FormBaoCaoThongKeKho(), sender);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -188,6 +186,7 @@ namespace DoAn
             if (isDropped1) timer1.Start();
             if (isDropped2) timer2.Start();
             if (isDropped3) timer3.Start();
+            OpenChildForm(new FormBaoCaoThongKeNK(), sender);
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -223,17 +222,17 @@ namespace DoAn
 
         private void button13_Click(object sender, EventArgs e)
         {
-            panel4.Size = panel4.MinimumSize;
+            //panel4.Size = panel4.MinimumSize;
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
-            panel4.Size = panel4.MinimumSize;
+            //panel4.Size = panel4.MinimumSize;
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-            panel4.Size = panel4.MinimumSize;
+            //panel4.Size = panel4.MinimumSize;
         }
 
         private void button16_Click(object sender, EventArgs e)
@@ -249,6 +248,11 @@ namespace DoAn
         private void button14_Click(object sender, EventArgs e)
         {
             panel5.Size = panel5.MinimumSize;
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -12,31 +12,69 @@ namespace DoAn
 {
     public partial class FormQuanLyThu : Form
     {
+        private Form activeForm;
         public FormQuanLyThu()
         {
             InitializeComponent();
         }
+        private void OpenChildForm(Form childForm, object btnSender)
+        {
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.panel4.Controls.Add(childForm);
+            this.panel4.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
 
         private void FormQuanLyThu_Load(object sender, EventArgs e)
         {
-            foreach (Control btns in this.Controls)
-            {
-                if (btns.GetType() == typeof(Button))
-                {
-                    Button btn = (Button)btns;
-                    btn.BackColor = ThemeColor.PrimaryColor;
-                    btn.ForeColor = Color.White;
-                    btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
-                }
-            }
-            groupBox1.ForeColor = ThemeColor.PrimaryColor;
+            button4.BackColor = ThemeColor.PrimaryColor;
+            button4.ForeColor = Color.White;
+            button4.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
 
-            guna2DataGridView1.DataSource = DataController.ExecTable("select tenphuthu, thanhtien from phuthu");
+            button5.BackColor = ThemeColor.PrimaryColor;
+            button5.ForeColor = Color.White;
+            button5.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+
+            OpenChildForm(new PhuThu(), sender);
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new PhuThu(), sender);
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new TienAn(), sender);
         }
     }
 }
