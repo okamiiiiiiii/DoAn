@@ -11,7 +11,7 @@ namespace DoAn
 {
     class DataController
     {
-        private static string connStr = @"Data Source=21AK22-COM;Initial Catalog=mamnonsaoviet2;Integrated Security=True";
+        private static string connStr = @"Data Source=MINHTHIEN\SQLEXPRESS;Initial Catalog=mamnonsaoviet2;Integrated Security=True";
 
         public static DataTable ExecTable(string query)
         {

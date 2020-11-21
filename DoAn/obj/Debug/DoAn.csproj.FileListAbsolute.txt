@@ -61,3 +61,13 @@ C:\Users\Administrator\Source\Repos\okamiiiiiiii\DoAn\DoAn\obj\Debug\DoAn.FormBa
 C:\Users\Administrator\Source\Repos\okamiiiiiiii\DoAn\DoAn\obj\Debug\DoAn.FormBaoCaoThongKeNK.resources
 C:\Users\Administrator\Source\Repos\okamiiiiiiii\DoAn\DoAn\obj\Debug\DoAn.PhuThu.resources
 C:\Users\Administrator\Source\Repos\okamiiiiiiii\DoAn\DoAn\obj\Debug\DoAn.TienAn.resources
+D:\DoAn\DoAn\obj\Debug\DoAn.FormBaoCaoThongKeKho.resources
+D:\DoAn\DoAn\obj\Debug\DoAn.FormBaoCaoThongKeNK.resources
+D:\DoAn\DoAn\obj\Debug\DoAn.PhuThu.resources
+D:\DoAn\DoAn\obj\Debug\DoAn.TienAn.resources
+D:\DoAn\DoAn\obj\Debug\DoAn.FormCaiDatThamSo.resources
+D:\DoAn\DoAn\obj\Debug\DoAn.CaiDatThamSo.LoaiPhuThu.resources
+D:\DoAn\DoAn\obj\Debug\DoAn.View.FormQuanLyVeThang.resources
+D:\DoAn\DoAn\obj\Debug\DoAn.View.CaiDatThamSo.ThongSoLuong.resources
+D:\DoAn\DoAn\obj\Debug\DoAn.View.CaiDatThamSo.HinhThucAn.resources
+D:\DoAn\DoAn\obj\Debug\DoAn.View.CaiDatThamSo.HocPhi.resources
