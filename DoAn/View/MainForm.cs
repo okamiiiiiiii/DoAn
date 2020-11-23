@@ -42,13 +42,31 @@ namespace DoAn
             this.Text = string.Empty;
             this.ControlBox = false;
 
-            //string phanquyen = LoginUser.UserData()["phanquyen"].ToString();
+            string phanquyen = LoginUser.UserData()["machucvu"].ToString();
 
-            //if(phanquyen == "giáo viên")
-            //{
-            //    btnBaoCaoThongKe.Visible = false;
-            //    btnQuanLyChi.Visible = false;
-            //}
+            if (phanquyen == "1")
+            {
+                btnBaoCaoThongKe.Visible = false;
+                btnQuanLyChi.Visible = false;
+                btnCaiDatThamSo.Visible = false;
+                btnQuanLyHeThong.Visible = false;
+                btnQuanLyHocSinh.Visible = false;
+                btnQuanLyThu.Visible = false;
+            }
+
+            if (phanquyen == "2")
+            {
+            }
+
+            if (phanquyen == "3")
+            {
+                    
+            }
+
+            if (phanquyen == "4")
+            {
+
+            }
 
         }
 

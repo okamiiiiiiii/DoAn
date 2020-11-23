@@ -55,6 +55,7 @@
     <Compile Include="Controller\HinhThucAnController.cs" />
     <Compile Include="Controller\HocPhiController.cs" />
     <Compile Include="Controller\HocSinhController.cs" />
+    <Compile Include="Controller\Kho.cs" />
     <Compile Include="Controller\LoaiPhuThuController.cs" />
     <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Controller\NhanVienController.cs" />

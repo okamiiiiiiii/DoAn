@@ -55,8 +55,7 @@ namespace DoAn
                 "thoigian, " +
                 "tennv " +
                 "from tttienchi " +
-                "inner join giaovien on tttienchi.magv = giaovien.magv " +
-                "inner join nhanvien on giaovien.manv = nhanvien.manv");
+                "inner join nhanvien on tttienchi.manv = nhanvien.manv");
             cbb_type.Visible = false;
             lbl_type.Visible = false;
             txt_GhiChu.Enabled = false;
@@ -257,7 +256,7 @@ namespace DoAn
                 else
                 {
                     string loai = (cbb_loaikhoanchi.SelectedIndex + 1).ToString();
-                    string magiaovien = DataController.ExecTable("select magv from giaovien where manv = " + LoginUser.UserData()["manv"].ToString()).Rows[0]["magv"].ToString();
+                    string magiaovien = LoginUser.UserData()["manv"].ToString();
                     DataController.Execute("inserttttienchi " +
                         txt_SoLuong.Text + "," +
                         "N'" + txt_ten.Text + "'," +
@@ -274,8 +273,7 @@ namespace DoAn
                     "thoigian, " +
                     "tennv " +
                     "from tttienchi " +
-                    "inner join giaovien on tttienchi.magv = giaovien.magv " +
-                    "inner join nhanvien on giaovien.manv = nhanvien.manv");
+                    "inner join nhanvien on tttienchi.manv = nhanvien.manv");
 
                     addMode = false;
 
@@ -391,7 +389,7 @@ namespace DoAn
                 {
                     string mathu1 = guna2DataGridView1.CurrentRow.Cells[0].Value.ToString();
                     string loai = (cbb_loaikhoanchi.SelectedIndex + 1).ToString();
-                    string magiaovien = DataController.ExecTable("select magv from giaovien where manv = " + LoginUser.UserData()["manv"].ToString()).Rows[0]["magv"].ToString();
+                    string magiaovien = LoginUser.UserData()["manv"].ToString();
 
                     DataController.Execute("update tttienchi set " +
                         "soluong = " + txt_SoLuong.Text +
@@ -407,8 +405,7 @@ namespace DoAn
                     "thoigian, " +
                     "tennv " +
                     "from tttienchi " +
-                    "inner join giaovien on tttienchi.magv = giaovien.magv " +
-                    "inner join nhanvien on giaovien.manv = nhanvien.manv");
+                    "inner join nhanvien on tttienchi.manv = nhanvien.manv");
 
 
                     editMode = false;
@@ -463,8 +460,7 @@ namespace DoAn
                     "thoigian, " +
                     "tennv " +
                     "from tttienchi " +
-                    "inner join giaovien on tttienchi.magv = giaovien.magv " +
-                    "inner join nhanvien on giaovien.manv = nhanvien.manv");
+                    "inner join nhanvien on tttienchi.manv = nhanvien.manv");
             DataTable dt = DataController.ExecTable("select * from tttienchi where matttc = " + guna2DataGridView1.CurrentRow.Cells[0].Value.ToString());
             DataRow data = dt.Rows[0];
 
@@ -489,6 +485,11 @@ namespace DoAn
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

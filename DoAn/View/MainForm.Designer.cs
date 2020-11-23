@@ -31,13 +31,29 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.btnCloseChildForm = new System.Windows.Forms.Button();
+            this.avtButton = new DoAn.CircleButton();
             this.labelTitle = new System.Windows.Forms.Label();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnCaiDatThamSo = new System.Windows.Forms.Button();
+            this.btnQuanLyChi = new System.Windows.Forms.Button();
+            this.btnQuanLyThu = new System.Windows.Forms.Button();
+            this.btnQuanLyHocSinh = new System.Windows.Forms.Button();
+            this.btnQuanLyVeAn = new System.Windows.Forms.Button();
+            this.btnBaoCaoThongKe = new System.Windows.Forms.Button();
+            this.btnQuanLyHeThong = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.labelTime = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panelDesktopPane = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -59,40 +75,24 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelRole = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
+            this.circlePictureBox1 = new DoAn.CirclePictureBox();
             this.btnLogout = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnCloseChildForm = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnCaiDatThamSo = new System.Windows.Forms.Button();
-            this.btnQuanLyChi = new System.Windows.Forms.Button();
-            this.btnQuanLyThu = new System.Windows.Forms.Button();
-            this.btnQuanLyHocSinh = new System.Windows.Forms.Button();
-            this.btnQuanLyVeAn = new System.Windows.Forms.Button();
-            this.btnBaoCaoThongKe = new System.Windows.Forms.Button();
-            this.btnQuanLyHeThong = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.controlPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.bntMinimize = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.circlePictureBox1 = new DoAn.CirclePictureBox();
-            this.avtButton = new DoAn.CircleButton();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.panelTitleBar.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelDesktopPane.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2GroupBox2.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             this.AccountPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.controlPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox1)).BeginInit();
+            this.controlPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTitleBar
@@ -107,6 +107,34 @@
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(1187, 86);
             this.panelTitleBar.TabIndex = 11;
+            // 
+            // btnCloseChildForm
+            // 
+            this.btnCloseChildForm.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnCloseChildForm.FlatAppearance.BorderSize = 0;
+            this.btnCloseChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseChildForm.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseChildForm.Image")));
+            this.btnCloseChildForm.Location = new System.Drawing.Point(0, 0);
+            this.btnCloseChildForm.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCloseChildForm.Name = "btnCloseChildForm";
+            this.btnCloseChildForm.Size = new System.Drawing.Size(100, 86);
+            this.btnCloseChildForm.TabIndex = 10;
+            this.btnCloseChildForm.UseVisualStyleBackColor = true;
+            this.btnCloseChildForm.Click += new System.EventHandler(this.btnCloseChildForm_Click);
+            // 
+            // avtButton
+            // 
+            this.avtButton.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.avtButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("avtButton.BackgroundImage")));
+            this.avtButton.FlatAppearance.BorderSize = 0;
+            this.avtButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.avtButton.Location = new System.Drawing.Point(1103, 5);
+            this.avtButton.Margin = new System.Windows.Forms.Padding(4);
+            this.avtButton.Name = "avtButton";
+            this.avtButton.Size = new System.Drawing.Size(67, 62);
+            this.avtButton.TabIndex = 13;
+            this.avtButton.UseVisualStyleBackColor = false;
+            this.avtButton.Click += new System.EventHandler(this.avtButton_Click);
             // 
             // labelTitle
             // 
@@ -146,6 +174,234 @@
             this.panelMenu.TabIndex = 10;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.SteelBlue;
+            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(0, 768);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(317, 62);
+            this.button6.TabIndex = 15;
+            this.button6.Text = "Quản lý kho";
+            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Visible = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.SteelBlue;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(0, 706);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(317, 62);
+            this.button5.TabIndex = 14;
+            this.button5.Text = "Hoạt động ngoại khóa";
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Visible = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.SteelBlue;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(0, 644);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(317, 62);
+            this.button4.TabIndex = 13;
+            this.button4.Text = "Điểm danh nhân sự";
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Visible = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.SteelBlue;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(0, 582);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(317, 62);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "Quản lý nhân sự";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Visible = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.SteelBlue;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(0, 520);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(317, 62);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Quản lý vé tháng";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // btnCaiDatThamSo
+            // 
+            this.btnCaiDatThamSo.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnCaiDatThamSo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCaiDatThamSo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCaiDatThamSo.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCaiDatThamSo.ForeColor = System.Drawing.Color.White;
+            this.btnCaiDatThamSo.Image = ((System.Drawing.Image)(resources.GetObject("btnCaiDatThamSo.Image")));
+            this.btnCaiDatThamSo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCaiDatThamSo.Location = new System.Drawing.Point(0, 458);
+            this.btnCaiDatThamSo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCaiDatThamSo.Name = "btnCaiDatThamSo";
+            this.btnCaiDatThamSo.Size = new System.Drawing.Size(317, 62);
+            this.btnCaiDatThamSo.TabIndex = 10;
+            this.btnCaiDatThamSo.Text = "Cài đặt tham số";
+            this.btnCaiDatThamSo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCaiDatThamSo.UseVisualStyleBackColor = false;
+            this.btnCaiDatThamSo.Click += new System.EventHandler(this.btnCaiDatThamSo_Click);
+            // 
+            // btnQuanLyChi
+            // 
+            this.btnQuanLyChi.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnQuanLyChi.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnQuanLyChi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuanLyChi.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuanLyChi.ForeColor = System.Drawing.Color.White;
+            this.btnQuanLyChi.Image = ((System.Drawing.Image)(resources.GetObject("btnQuanLyChi.Image")));
+            this.btnQuanLyChi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQuanLyChi.Location = new System.Drawing.Point(0, 396);
+            this.btnQuanLyChi.Margin = new System.Windows.Forms.Padding(4);
+            this.btnQuanLyChi.Name = "btnQuanLyChi";
+            this.btnQuanLyChi.Size = new System.Drawing.Size(317, 62);
+            this.btnQuanLyChi.TabIndex = 1;
+            this.btnQuanLyChi.Text = "Quản lý chi";
+            this.btnQuanLyChi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnQuanLyChi.UseVisualStyleBackColor = false;
+            this.btnQuanLyChi.Click += new System.EventHandler(this.btnQuanLyChi_Click);
+            // 
+            // btnQuanLyThu
+            // 
+            this.btnQuanLyThu.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnQuanLyThu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnQuanLyThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuanLyThu.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuanLyThu.ForeColor = System.Drawing.Color.White;
+            this.btnQuanLyThu.Image = ((System.Drawing.Image)(resources.GetObject("btnQuanLyThu.Image")));
+            this.btnQuanLyThu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQuanLyThu.Location = new System.Drawing.Point(0, 334);
+            this.btnQuanLyThu.Margin = new System.Windows.Forms.Padding(4);
+            this.btnQuanLyThu.Name = "btnQuanLyThu";
+            this.btnQuanLyThu.Size = new System.Drawing.Size(317, 62);
+            this.btnQuanLyThu.TabIndex = 2;
+            this.btnQuanLyThu.Text = "Quản lý thu";
+            this.btnQuanLyThu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnQuanLyThu.UseVisualStyleBackColor = false;
+            this.btnQuanLyThu.Click += new System.EventHandler(this.btnQuanLyThu_Click);
+            // 
+            // btnQuanLyHocSinh
+            // 
+            this.btnQuanLyHocSinh.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnQuanLyHocSinh.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnQuanLyHocSinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuanLyHocSinh.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuanLyHocSinh.ForeColor = System.Drawing.Color.White;
+            this.btnQuanLyHocSinh.Image = ((System.Drawing.Image)(resources.GetObject("btnQuanLyHocSinh.Image")));
+            this.btnQuanLyHocSinh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQuanLyHocSinh.Location = new System.Drawing.Point(0, 272);
+            this.btnQuanLyHocSinh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnQuanLyHocSinh.Name = "btnQuanLyHocSinh";
+            this.btnQuanLyHocSinh.Size = new System.Drawing.Size(317, 62);
+            this.btnQuanLyHocSinh.TabIndex = 4;
+            this.btnQuanLyHocSinh.Text = "Quản lý học sinh";
+            this.btnQuanLyHocSinh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnQuanLyHocSinh.UseVisualStyleBackColor = false;
+            this.btnQuanLyHocSinh.Click += new System.EventHandler(this.btnQuanLyHocSinh_Click);
+            // 
+            // btnQuanLyVeAn
+            // 
+            this.btnQuanLyVeAn.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnQuanLyVeAn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnQuanLyVeAn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuanLyVeAn.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuanLyVeAn.ForeColor = System.Drawing.Color.White;
+            this.btnQuanLyVeAn.Image = ((System.Drawing.Image)(resources.GetObject("btnQuanLyVeAn.Image")));
+            this.btnQuanLyVeAn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQuanLyVeAn.Location = new System.Drawing.Point(0, 210);
+            this.btnQuanLyVeAn.Margin = new System.Windows.Forms.Padding(4);
+            this.btnQuanLyVeAn.Name = "btnQuanLyVeAn";
+            this.btnQuanLyVeAn.Size = new System.Drawing.Size(317, 62);
+            this.btnQuanLyVeAn.TabIndex = 6;
+            this.btnQuanLyVeAn.Text = "Điểm danh học sinh";
+            this.btnQuanLyVeAn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnQuanLyVeAn.UseVisualStyleBackColor = false;
+            this.btnQuanLyVeAn.Click += new System.EventHandler(this.btnQuanLyVeAn_Click);
+            // 
+            // btnBaoCaoThongKe
+            // 
+            this.btnBaoCaoThongKe.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnBaoCaoThongKe.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBaoCaoThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBaoCaoThongKe.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBaoCaoThongKe.ForeColor = System.Drawing.Color.White;
+            this.btnBaoCaoThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnBaoCaoThongKe.Image")));
+            this.btnBaoCaoThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBaoCaoThongKe.Location = new System.Drawing.Point(0, 148);
+            this.btnBaoCaoThongKe.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBaoCaoThongKe.Name = "btnBaoCaoThongKe";
+            this.btnBaoCaoThongKe.Size = new System.Drawing.Size(317, 62);
+            this.btnBaoCaoThongKe.TabIndex = 7;
+            this.btnBaoCaoThongKe.Text = "Báo cáo thống kê";
+            this.btnBaoCaoThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBaoCaoThongKe.UseVisualStyleBackColor = false;
+            this.btnBaoCaoThongKe.Click += new System.EventHandler(this.btnBaoCaoThongKe_Click);
+            // 
+            // btnQuanLyHeThong
+            // 
+            this.btnQuanLyHeThong.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnQuanLyHeThong.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnQuanLyHeThong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuanLyHeThong.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuanLyHeThong.ForeColor = System.Drawing.Color.White;
+            this.btnQuanLyHeThong.Image = ((System.Drawing.Image)(resources.GetObject("btnQuanLyHeThong.Image")));
+            this.btnQuanLyHeThong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQuanLyHeThong.Location = new System.Drawing.Point(0, 86);
+            this.btnQuanLyHeThong.Margin = new System.Windows.Forms.Padding(4);
+            this.btnQuanLyHeThong.Name = "btnQuanLyHeThong";
+            this.btnQuanLyHeThong.Size = new System.Drawing.Size(317, 62);
+            this.btnQuanLyHeThong.TabIndex = 3;
+            this.btnQuanLyHeThong.Text = "Quản lý tài khoản";
+            this.btnQuanLyHeThong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnQuanLyHeThong.UseVisualStyleBackColor = false;
+            this.btnQuanLyHeThong.Click += new System.EventHandler(this.btnQuanLyHeThong_Click);
+            // 
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.Color.RoyalBlue;
@@ -168,6 +424,18 @@
             this.labelTime.Size = new System.Drawing.Size(200, 68);
             this.labelTime.TabIndex = 1;
             this.labelTime.Text = "label2";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 695);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(317, 174);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
             // 
             // timer1
             // 
@@ -192,6 +460,17 @@
             this.panelDesktopPane.Size = new System.Drawing.Size(1187, 783);
             this.panelDesktopPane.TabIndex = 12;
             this.panelDesktopPane.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktopPane_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(216, 407);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(584, 205);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
             // 
             // guna2GroupBox2
             // 
@@ -456,6 +735,18 @@
             this.labelName.TabIndex = 19;
             this.labelName.Text = "Hoàng Đức Dũng";
             // 
+            // circlePictureBox1
+            // 
+            this.circlePictureBox1.BackColor = System.Drawing.Color.DarkRed;
+            this.circlePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("circlePictureBox1.Image")));
+            this.circlePictureBox1.Location = new System.Drawing.Point(79, 30);
+            this.circlePictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.circlePictureBox1.Name = "circlePictureBox1";
+            this.circlePictureBox1.Size = new System.Drawing.Size(133, 123);
+            this.circlePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circlePictureBox1.TabIndex = 18;
+            this.circlePictureBox1.TabStop = false;
+            // 
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -487,195 +778,6 @@
             this.button1.Text = "Thông tin tài khoản";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(216, 407);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(584, 205);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 32;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnCloseChildForm
-            // 
-            this.btnCloseChildForm.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnCloseChildForm.FlatAppearance.BorderSize = 0;
-            this.btnCloseChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseChildForm.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseChildForm.Image")));
-            this.btnCloseChildForm.Location = new System.Drawing.Point(0, 0);
-            this.btnCloseChildForm.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCloseChildForm.Name = "btnCloseChildForm";
-            this.btnCloseChildForm.Size = new System.Drawing.Size(100, 86);
-            this.btnCloseChildForm.TabIndex = 10;
-            this.btnCloseChildForm.UseVisualStyleBackColor = true;
-            this.btnCloseChildForm.Click += new System.EventHandler(this.btnCloseChildForm_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.SteelBlue;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 520);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(317, 62);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Quản lý vé tháng";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // btnCaiDatThamSo
-            // 
-            this.btnCaiDatThamSo.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnCaiDatThamSo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCaiDatThamSo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCaiDatThamSo.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCaiDatThamSo.ForeColor = System.Drawing.Color.White;
-            this.btnCaiDatThamSo.Image = ((System.Drawing.Image)(resources.GetObject("btnCaiDatThamSo.Image")));
-            this.btnCaiDatThamSo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCaiDatThamSo.Location = new System.Drawing.Point(0, 458);
-            this.btnCaiDatThamSo.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCaiDatThamSo.Name = "btnCaiDatThamSo";
-            this.btnCaiDatThamSo.Size = new System.Drawing.Size(317, 62);
-            this.btnCaiDatThamSo.TabIndex = 10;
-            this.btnCaiDatThamSo.Text = "Cài đặt tham số";
-            this.btnCaiDatThamSo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCaiDatThamSo.UseVisualStyleBackColor = false;
-            this.btnCaiDatThamSo.Click += new System.EventHandler(this.btnCaiDatThamSo_Click);
-            // 
-            // btnQuanLyChi
-            // 
-            this.btnQuanLyChi.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnQuanLyChi.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnQuanLyChi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuanLyChi.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuanLyChi.ForeColor = System.Drawing.Color.White;
-            this.btnQuanLyChi.Image = ((System.Drawing.Image)(resources.GetObject("btnQuanLyChi.Image")));
-            this.btnQuanLyChi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQuanLyChi.Location = new System.Drawing.Point(0, 396);
-            this.btnQuanLyChi.Margin = new System.Windows.Forms.Padding(4);
-            this.btnQuanLyChi.Name = "btnQuanLyChi";
-            this.btnQuanLyChi.Size = new System.Drawing.Size(317, 62);
-            this.btnQuanLyChi.TabIndex = 1;
-            this.btnQuanLyChi.Text = "Quản lý chi";
-            this.btnQuanLyChi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnQuanLyChi.UseVisualStyleBackColor = false;
-            this.btnQuanLyChi.Click += new System.EventHandler(this.btnQuanLyChi_Click);
-            // 
-            // btnQuanLyThu
-            // 
-            this.btnQuanLyThu.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnQuanLyThu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnQuanLyThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuanLyThu.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuanLyThu.ForeColor = System.Drawing.Color.White;
-            this.btnQuanLyThu.Image = ((System.Drawing.Image)(resources.GetObject("btnQuanLyThu.Image")));
-            this.btnQuanLyThu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQuanLyThu.Location = new System.Drawing.Point(0, 334);
-            this.btnQuanLyThu.Margin = new System.Windows.Forms.Padding(4);
-            this.btnQuanLyThu.Name = "btnQuanLyThu";
-            this.btnQuanLyThu.Size = new System.Drawing.Size(317, 62);
-            this.btnQuanLyThu.TabIndex = 2;
-            this.btnQuanLyThu.Text = "Quản lý thu";
-            this.btnQuanLyThu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnQuanLyThu.UseVisualStyleBackColor = false;
-            this.btnQuanLyThu.Click += new System.EventHandler(this.btnQuanLyThu_Click);
-            // 
-            // btnQuanLyHocSinh
-            // 
-            this.btnQuanLyHocSinh.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnQuanLyHocSinh.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnQuanLyHocSinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuanLyHocSinh.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuanLyHocSinh.ForeColor = System.Drawing.Color.White;
-            this.btnQuanLyHocSinh.Image = ((System.Drawing.Image)(resources.GetObject("btnQuanLyHocSinh.Image")));
-            this.btnQuanLyHocSinh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQuanLyHocSinh.Location = new System.Drawing.Point(0, 272);
-            this.btnQuanLyHocSinh.Margin = new System.Windows.Forms.Padding(4);
-            this.btnQuanLyHocSinh.Name = "btnQuanLyHocSinh";
-            this.btnQuanLyHocSinh.Size = new System.Drawing.Size(317, 62);
-            this.btnQuanLyHocSinh.TabIndex = 4;
-            this.btnQuanLyHocSinh.Text = "Quản lý học sinh";
-            this.btnQuanLyHocSinh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnQuanLyHocSinh.UseVisualStyleBackColor = false;
-            this.btnQuanLyHocSinh.Click += new System.EventHandler(this.btnQuanLyHocSinh_Click);
-            // 
-            // btnQuanLyVeAn
-            // 
-            this.btnQuanLyVeAn.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnQuanLyVeAn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnQuanLyVeAn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuanLyVeAn.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuanLyVeAn.ForeColor = System.Drawing.Color.White;
-            this.btnQuanLyVeAn.Image = ((System.Drawing.Image)(resources.GetObject("btnQuanLyVeAn.Image")));
-            this.btnQuanLyVeAn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQuanLyVeAn.Location = new System.Drawing.Point(0, 210);
-            this.btnQuanLyVeAn.Margin = new System.Windows.Forms.Padding(4);
-            this.btnQuanLyVeAn.Name = "btnQuanLyVeAn";
-            this.btnQuanLyVeAn.Size = new System.Drawing.Size(317, 62);
-            this.btnQuanLyVeAn.TabIndex = 6;
-            this.btnQuanLyVeAn.Text = "Điểm danh học sinh";
-            this.btnQuanLyVeAn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnQuanLyVeAn.UseVisualStyleBackColor = false;
-            this.btnQuanLyVeAn.Click += new System.EventHandler(this.btnQuanLyVeAn_Click);
-            // 
-            // btnBaoCaoThongKe
-            // 
-            this.btnBaoCaoThongKe.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnBaoCaoThongKe.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBaoCaoThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBaoCaoThongKe.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBaoCaoThongKe.ForeColor = System.Drawing.Color.White;
-            this.btnBaoCaoThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnBaoCaoThongKe.Image")));
-            this.btnBaoCaoThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBaoCaoThongKe.Location = new System.Drawing.Point(0, 148);
-            this.btnBaoCaoThongKe.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBaoCaoThongKe.Name = "btnBaoCaoThongKe";
-            this.btnBaoCaoThongKe.Size = new System.Drawing.Size(317, 62);
-            this.btnBaoCaoThongKe.TabIndex = 7;
-            this.btnBaoCaoThongKe.Text = "Báo cáo thống kê";
-            this.btnBaoCaoThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBaoCaoThongKe.UseVisualStyleBackColor = false;
-            this.btnBaoCaoThongKe.Click += new System.EventHandler(this.btnBaoCaoThongKe_Click);
-            // 
-            // btnQuanLyHeThong
-            // 
-            this.btnQuanLyHeThong.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnQuanLyHeThong.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnQuanLyHeThong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuanLyHeThong.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuanLyHeThong.ForeColor = System.Drawing.Color.White;
-            this.btnQuanLyHeThong.Image = ((System.Drawing.Image)(resources.GetObject("btnQuanLyHeThong.Image")));
-            this.btnQuanLyHeThong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQuanLyHeThong.Location = new System.Drawing.Point(0, 86);
-            this.btnQuanLyHeThong.Margin = new System.Windows.Forms.Padding(4);
-            this.btnQuanLyHeThong.Name = "btnQuanLyHeThong";
-            this.btnQuanLyHeThong.Size = new System.Drawing.Size(317, 62);
-            this.btnQuanLyHeThong.TabIndex = 3;
-            this.btnQuanLyHeThong.Text = "Quản lý tài khoản";
-            this.btnQuanLyHeThong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnQuanLyHeThong.UseVisualStyleBackColor = false;
-            this.btnQuanLyHeThong.Click += new System.EventHandler(this.btnQuanLyHeThong_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 695);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(317, 174);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
             // 
             // controlPanel
             // 
@@ -741,104 +843,6 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // circlePictureBox1
-            // 
-            this.circlePictureBox1.BackColor = System.Drawing.Color.DarkRed;
-            this.circlePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("circlePictureBox1.Image")));
-            this.circlePictureBox1.Location = new System.Drawing.Point(79, 30);
-            this.circlePictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.circlePictureBox1.Name = "circlePictureBox1";
-            this.circlePictureBox1.Size = new System.Drawing.Size(133, 123);
-            this.circlePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circlePictureBox1.TabIndex = 18;
-            this.circlePictureBox1.TabStop = false;
-            // 
-            // avtButton
-            // 
-            this.avtButton.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.avtButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("avtButton.BackgroundImage")));
-            this.avtButton.FlatAppearance.BorderSize = 0;
-            this.avtButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.avtButton.Location = new System.Drawing.Point(1103, 5);
-            this.avtButton.Margin = new System.Windows.Forms.Padding(4);
-            this.avtButton.Name = "avtButton";
-            this.avtButton.Size = new System.Drawing.Size(67, 62);
-            this.avtButton.TabIndex = 13;
-            this.avtButton.UseVisualStyleBackColor = false;
-            this.avtButton.Click += new System.EventHandler(this.avtButton_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.SteelBlue;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 582);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(317, 62);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Quản lý nhân sự";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.SteelBlue;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 644);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(317, 62);
-            this.button4.TabIndex = 13;
-            this.button4.Text = "Điểm danh nhân sự";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.SteelBlue;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 706);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(317, 62);
-            this.button5.TabIndex = 14;
-            this.button5.Text = "Hoạt động ngoại khóa";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.SteelBlue;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 768);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(317, 62);
-            this.button6.TabIndex = 15;
-            this.button6.Text = "Quản lý kho";
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button6.UseVisualStyleBackColor = false;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -860,19 +864,19 @@
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelDesktopPane.ResumeLayout(false);
             this.panelDesktopPane.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2GroupBox2.ResumeLayout(false);
             this.guna2GroupBox2.PerformLayout();
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
             this.AccountPanel.ResumeLayout(false);
             this.AccountPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox1)).EndInit();
             this.controlPanel.ResumeLayout(false);
             this.controlPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
