@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Controller\AccountController.cs" />
     <Compile Include="Controller\DuLieuController.cs" />
+    <Compile Include="Controller\HDNKController.cs" />
     <Compile Include="Controller\HinhThucAnController.cs" />
     <Compile Include="Controller\HocPhiController.cs" />
     <Compile Include="Controller\HocSinhController.cs" />
@@ -58,6 +59,12 @@
     <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Controller\NhanVienController.cs" />
     <Compile Include="Controller\VeThangController.cs" />
+    <Compile Include="View\CaiDatThamSo\HDNK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CaiDatThamSo\HDNK.Designer.cs">
+      <DependentUpon>HDNK.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\CaiDatThamSo\HocPhi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +76,12 @@
     </Compile>
     <Compile Include="View\CaiDatThamSo\HinhThucAn.Designer.cs">
       <DependentUpon>HinhThucAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CaiDatThamSo\Kho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CaiDatThamSo\Kho.Designer.cs">
+      <DependentUpon>Kho.cs</DependentUpon>
     </Compile>
     <Compile Include="View\CaiDatThamSo\LoaiPhuThu.cs">
       <SubType>Form</SubType>
@@ -194,11 +207,17 @@
     <Compile Include="View\TienAn.Designer.cs">
       <DependentUpon>TienAn.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\CaiDatThamSo\HDNK.resx">
+      <DependentUpon>HDNK.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\CaiDatThamSo\HocPhi.resx">
       <DependentUpon>HocPhi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\CaiDatThamSo\HinhThucAn.resx">
       <DependentUpon>HinhThucAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CaiDatThamSo\Kho.resx">
+      <DependentUpon>Kho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\CaiDatThamSo\LoaiPhuThu.resx">
       <DependentUpon>LoaiPhuThu.cs</DependentUpon>

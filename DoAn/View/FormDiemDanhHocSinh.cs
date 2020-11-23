@@ -99,6 +99,13 @@ namespace DoAn
                     "WHERE maxuatan = " + maxuatan;
                 DataController.Execute(query3);
             }
+
+            if (guna2DataGridView1.Columns[e.ColumnIndex].Name == "vangmat")
+            {
+                int vang = Convert.ToInt32(guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
+                MessageBox.Show(vang.ToString());
+                DataGridViewComboBoxCell data = (DataGridViewComboBoxCell)guna2DataGridView1.Rows[e.RowIndex].Cells["diemdanhvean"];
+            }
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)

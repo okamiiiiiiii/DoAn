@@ -53,6 +53,12 @@ namespace DoAn
             if (editMode) editMode = false;
             if (addMode) addMode = false;
             if (btn_HuyThem.Visible == true) btn_HuyThem.Visible = false;
+            cbb_manv.Items.Clear();
+            foreach (DataRow row in Controller.AccountController.fetchAll().Rows)
+            {
+                if (string.IsNullOrEmpty(row["tentaikhoan"].ToString()))
+                    cbb_manv.Items.Add(row["manv"].ToString());
+            }
         } 
         private void ViewLoad()
         {
@@ -60,6 +66,7 @@ namespace DoAn
             getInfo();
             bt_Sua.Enabled = true;
             bt_Xoa.Enabled = true;
+            cbb_manv.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void LoadTheme()
@@ -80,11 +87,6 @@ namespace DoAn
         {
             LoadTheme();
             ViewLoad();
-            foreach (DataRow row in Controller.AccountController.fetchAll().Rows)
-            {
-                if(string.IsNullOrEmpty(row["tentaikhoan"].ToString()))
-                    cbb_manv.Items.Add(row["manv"].ToString());
-            }
         }
 
         private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -130,7 +132,7 @@ namespace DoAn
             DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn xoá", "Xoá tài khoản", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                string manv = cbb_manv.Text;
+                string manv = guna2DataGridView1.CurrentRow.Cells["manv"].Value.ToString();
                 Controller.AccountController.DeleteAccount(manv);
             }
             ViewLoad();
@@ -155,7 +157,7 @@ namespace DoAn
                     MessageBox.Show("Chưa nhập mật khẩu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
                 {
-                    string manv = cbb_manv.Text;
+                    string manv = guna2DataGridView1.CurrentRow.Cells["manv"].Value.ToString();
                     string taikhoan = txt_TK.Text;
                     string matkhau = txt_MK.Text;
                     Controller.AccountController.UpdateAccount(manv, taikhoan, matkhau);
@@ -178,7 +180,7 @@ namespace DoAn
         {
             string id = cbb_manv.Text;
             DataRow data = Controller.NhanVienController.findOneByID(id);
-            txt_TK.Text = data["tentaikhoan"].ToString();
+            txt_ten.Text = data["tennv"].ToString();
         }
     }
 }

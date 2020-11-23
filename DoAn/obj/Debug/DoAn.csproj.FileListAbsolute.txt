@@ -71,3 +71,5 @@ D:\DoAn\DoAn\obj\Debug\DoAn.View.FormQuanLyVeThang.resources
 D:\DoAn\DoAn\obj\Debug\DoAn.View.CaiDatThamSo.ThongSoLuong.resources
 D:\DoAn\DoAn\obj\Debug\DoAn.View.CaiDatThamSo.HinhThucAn.resources
 D:\DoAn\DoAn\obj\Debug\DoAn.View.CaiDatThamSo.HocPhi.resources
+D:\DoAn\DoAn\obj\Debug\DoAn.View.CaiDatThamSo.HDNK.resources
+D:\DoAn\DoAn\obj\Debug\DoAn.View.CaiDatThamSo.Kho.resources

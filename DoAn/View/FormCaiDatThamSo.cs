@@ -75,5 +75,15 @@ namespace DoAn
         {
             OpenChildForm(new View.CaiDatThamSo.HocPhi(), sender);
         }
+
+        private void btn_HDNK_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new View.CaiDatThamSo.HDNK(), sender);
+        }
+
+        private void btn_Kho_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new View.CaiDatThamSo.Kho(), sender);
+        }
     }
 }
