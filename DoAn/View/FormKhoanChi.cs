@@ -24,9 +24,19 @@ namespace DoAn.View
             id = int.Parse(idPC);
         }
 
-        private void FormKhoanChi_Load(object sender, EventArgs e)
+        public void getInfo()
         {
 
+        }
+
+        public void ViewLoad()
+        {
+            guna2DataGridView1.DataSource = Controller.KhoanChiController.fetchTienChiNguyenLieu();
+        }
+
+        private void FormKhoanChi_Load(object sender, EventArgs e)
+        {
+            ViewLoad();
         }
 
         private void groupBox3_Enter(object sender, EventArgs e)

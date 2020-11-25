@@ -45,24 +45,29 @@ namespace DoAn.Controller
             return DataController.ExecTable("select * from tttienchi where maphieuchi = " + id);
         }
 
-        static public void addPhieuChi(string tenphieuchi, string tg, string manv, string matrangthai)
+        static public void addPhieuChi(string tenphieuchi, int matrangthai)
         {
             DataController.Execute("insert into phieuchi values(" +
                 "N'" + tenphieuchi + "', " +
                 "'" + DateTime.Now.ToString("yyyy-MM-dd") +"', " +
                 "dbo.getmabctt2(), " +
                 LoginUser.manv + ", " +
-                "1)");
+                + matrangthai +")");
         }
 
-        static public void updatePhieuChi(string tenphieuchi, int matrangthaiphieuchi)
+        static public void updatePhieuChi(string id, string tenphieuchi, int matrangthaiphieuchi)
         {
-            DataController.Execute("update phieuchi set tenphieuchi = N'" + tenphieuchi + "', matrangthaiphieuchi = " + matrangthaiphieuchi); ;
+            DataController.Execute("update phieuchi set tenphieuchi = N'" + tenphieuchi + "', matrangthaiphieuchi = " + matrangthaiphieuchi + " where maphieuchi = " + id);
         }
 
         static public void deletePhieuChi(string id)
         {
             DataController.Execute("delete phieuchi where maphieuchi = " + id);
+        }
+
+        static public DataTable fetchTrangThai()
+        {
+            return DataController.ExecTable("select * from trangthaiphieuchi");
         }
     }
 }
