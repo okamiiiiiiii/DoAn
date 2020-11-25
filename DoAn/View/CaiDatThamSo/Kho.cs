@@ -57,7 +57,7 @@ namespace DoAn.View.CaiDatThamSo
             DataRow data = Controller.Kho.nguyenlieu(id);
 
             txt_ten1.Text = data["tennguyenlieu"].ToString();
-            txt_soluong1.Text = data["soluong"].ToString();
+            txt_soluong1.Text = data["soluongnguyenlieu"].ToString();
             txt_ghichu1.Text = data["ghichu"].ToString();
 
             Disable1();
@@ -77,7 +77,7 @@ namespace DoAn.View.CaiDatThamSo
             DataRow data = Controller.Kho.hoclieu(id);
 
             txt_ten2.Text = data["tenhoclieu"].ToString();
-            txt_SoLuong2.Text = data["soluong"].ToString();
+            txt_SoLuong2.Text = data["soluonghoclieu"].ToString();
             txt_GhiChu2.Text = data["ghichu"].ToString();
 
             Disable2();

@@ -42,31 +42,51 @@ namespace DoAn
             this.Text = string.Empty;
             this.ControlBox = false;
 
+            labelName.Text = LoginUser.UserData()["tennv"].ToString();
+            labelRole.Text = LoginUser.UserData()["tenchucvu"].ToString();
+
+
             string phanquyen = LoginUser.UserData()["machucvu"].ToString();
 
-            if (phanquyen == "1")
-            {
-                btnBaoCaoThongKe.Visible = false;
-                btnQuanLyChi.Visible = false;
-                btnCaiDatThamSo.Visible = false;
-                btnQuanLyHeThong.Visible = false;
-                btnQuanLyHocSinh.Visible = false;
-                btnQuanLyThu.Visible = false;
-            }
+            //if (phanquyen == "1")
+            //{
+            //    btnBaoCaoThongKe.Visible = false;
+            //    btnQuanLyChi.Visible = false;
+            //    btnCaiDatThamSo.Visible = false;
+            //    btnQuanLyHeThong.Visible = false;
+            //    btnQuanLyHocSinh.Visible = false;
+            //    btnQuanLyThu.Visible = false;
+            //}
 
-            if (phanquyen == "2")
-            {
-            }
+            //if (phanquyen == "2")
+            //{
 
-            if (phanquyen == "3")
-            {
-                    
-            }
+            //}
 
-            if (phanquyen == "4")
-            {
+            //if (phanquyen == "3")
+            //{
+            //    btnBaoCaoThongKe.Visible = false;
+            //    btnQuanLyChi.Visible = false;
+            //    btnCaiDatThamSo.Visible = false;
+            //    btnQuanLyHeThong.Visible = false;
+            //    btnQuanLyHocSinh.Visible = false;
+            //    btnQuanLyThu.Visible = false;
+            //    button2.Visible = false;
+            //    btnQuanLyVeAn.Visible = false;
 
-            }
+            //}
+            //else
+            //{
+            //    foreach (Control btns in this.Controls)
+            //    {
+            //        if (btns.GetType() == typeof(Button))
+            //        {
+            //            Button btn = (Button)btns;
+            //            btn.Visible = false;
+            //        }
+            //    }
+            //}
+
 
         }
 
@@ -141,7 +161,7 @@ namespace DoAn
 
         private void btnQuanLyChi_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormQuanLyChi(), sender);
+            OpenChildForm(new View.FormPhieuChi(), sender);
         }
 
         private void btnQuanLyThu_Click(object sender, EventArgs e)
@@ -348,6 +368,12 @@ namespace DoAn
         private void button2_Click_1(object sender, EventArgs e)
         {
             OpenChildForm(new View.FormQuanLyVeThang(), sender);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            InBaoCaoDiemDanh.output();
+            OpenChildForm(new View.CaiDatThamSo.Kho(), sender);
         }
     }
 

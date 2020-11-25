@@ -17,7 +17,7 @@ namespace DoAn.Controller
 
         static public DataTable fetchPhanLoai()
         {
-            return DataController.ExecTable("select * from phanLoai");
+            return DataController.ExecTable("select *, CONVERT(varchar, CAST( hocphi AS money),1) from phanLoai");
         }
 
         static public DataRow findKhoi(string id)

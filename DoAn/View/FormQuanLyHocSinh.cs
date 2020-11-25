@@ -61,6 +61,8 @@ namespace DoAn
             txt_sdtPhuHuynh.Text = data["sdtphuhuynh"].ToString();
             txt_GhiChu.Text = data["ghichumiengiam"].ToString();
             txt_TienMienGiam.Text = data["tienmiengiam"].ToString();
+            textBox1.Text = data["namnhaphoc"].ToString();
+            
 
             DisableAllControl();
 

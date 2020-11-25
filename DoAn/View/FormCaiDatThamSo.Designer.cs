@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btn_ChucVu = new System.Windows.Forms.Button();
             this.btn_Kho = new System.Windows.Forms.Button();
             this.btn_HDNK = new System.Windows.Forms.Button();
             this.btn_HocPhi = new System.Windows.Forms.Button();
@@ -42,6 +44,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btn_ChucVu);
             this.panel1.Controls.Add(this.btn_Kho);
             this.panel1.Controls.Add(this.btn_HDNK);
             this.panel1.Controls.Add(this.btn_HocPhi);
@@ -53,6 +57,36 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 735);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button2
+            // 
+            this.button2.AllowDrop = true;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(0, 418);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(200, 58);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Quản lý ";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
+            // 
+            // btn_ChucVu
+            // 
+            this.btn_ChucVu.AllowDrop = true;
+            this.btn_ChucVu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_ChucVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ChucVu.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ChucVu.Location = new System.Drawing.Point(0, 360);
+            this.btn_ChucVu.Name = "btn_ChucVu";
+            this.btn_ChucVu.Size = new System.Drawing.Size(200, 58);
+            this.btn_ChucVu.TabIndex = 7;
+            this.btn_ChucVu.Text = "Quản lý chức vụ";
+            this.btn_ChucVu.UseVisualStyleBackColor = true;
+            this.btn_ChucVu.Visible = false;
+            this.btn_ChucVu.Click += new System.EventHandler(this.btn_ChucVu_Click);
             // 
             // btn_Kho
             // 
@@ -60,7 +94,7 @@
             this.btn_Kho.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_Kho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Kho.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Kho.Location = new System.Drawing.Point(0, 290);
+            this.btn_Kho.Location = new System.Drawing.Point(0, 302);
             this.btn_Kho.Name = "btn_Kho";
             this.btn_Kho.Size = new System.Drawing.Size(200, 58);
             this.btn_Kho.TabIndex = 6;
@@ -73,10 +107,10 @@
             this.btn_HDNK.AllowDrop = true;
             this.btn_HDNK.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_HDNK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_HDNK.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_HDNK.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_HDNK.Location = new System.Drawing.Point(0, 232);
             this.btn_HDNK.Name = "btn_HDNK";
-            this.btn_HDNK.Size = new System.Drawing.Size(200, 58);
+            this.btn_HDNK.Size = new System.Drawing.Size(200, 70);
             this.btn_HDNK.TabIndex = 5;
             this.btn_HDNK.Text = "Hoạt động ngoại khóa";
             this.btn_HDNK.UseVisualStyleBackColor = true;
@@ -173,5 +207,7 @@
         private System.Windows.Forms.Button btn_HocPhi;
         private System.Windows.Forms.Button btn_HinhThucAn;
         private System.Windows.Forms.Button btn_ThongSoLuong;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_ChucVu;
     }
 }

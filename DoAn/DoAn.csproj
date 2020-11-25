@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DocX, Version=1.0.0.19, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocX.1.0.0.19\lib\net40\DocX.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.0.9, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.0.9\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
@@ -50,6 +53,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\AccountController.cs" />
+    <Compile Include="Controller\BaoCaoThongKe.cs" />
+    <Compile Include="Controller\ChucVuController.cs" />
+    <Compile Include="Controller\DiemDanhHocSinh.cs" />
     <Compile Include="Controller\DuLieuController.cs" />
     <Compile Include="Controller\HDNKController.cs" />
     <Compile Include="Controller\HinhThucAnController.cs" />
@@ -58,8 +64,25 @@
     <Compile Include="Controller\Kho.cs" />
     <Compile Include="Controller\LoaiPhuThuController.cs" />
     <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="Controller\NhanSuController.cs" />
     <Compile Include="Controller\NhanVienController.cs" />
+    <Compile Include="Controller\OutputFile.cs" />
+    <Compile Include="Controller\PhieuChiController.cs" />
     <Compile Include="Controller\VeThangController.cs" />
+    <Compile Include="InBaoCaoDiemDanh.cs" />
+    <Compile Include="View\BaoCaoThongKe\DiemDanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BaoCaoThongKe\DiemDanh.Designer.cs">
+      <DependentUpon>DiemDanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CaiDatThamSo\ChucVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CaiDatThamSo\ChucVu.Designer.cs">
+      <DependentUpon>ChucVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CaiDatThamSo\FormKhoanChi.cs" />
     <Compile Include="View\CaiDatThamSo\HDNK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,11 +150,29 @@
     <Compile Include="View\FormCaiDatThamSo.Designer.cs">
       <DependentUpon>FormCaiDatThamSo.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormKhoanChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormKhoanChi.Designer.cs">
+      <DependentUpon>FormKhoanChi.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormPhieuChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormPhieuChi.Designer.cs">
+      <DependentUpon>FormPhieuChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormQuanLyNhanSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormQuanLyNhanSu.Designer.cs">
+      <DependentUpon>FormQuanLyNhanSu.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormQuanLyTaiKhoan.cs">
       <SubType>Form</SubType>
@@ -157,10 +198,10 @@
     <Compile Include="View\FormQuanLyVeThang.Designer.cs">
       <DependentUpon>FormQuanLyVeThang.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormThongKeChiTheoThang.cs">
+    <Compile Include="View\BaoCaoThongKe\FormThongKeChiTheoThang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormThongKeChiTheoThang.Designer.cs">
+    <Compile Include="View\BaoCaoThongKe\FormThongKeChiTheoThang.Designer.cs">
       <DependentUpon>FormThongKeChiTheoThang.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginUser.cs" />
@@ -208,6 +249,12 @@
     <Compile Include="View\TienAn.Designer.cs">
       <DependentUpon>TienAn.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\BaoCaoThongKe\DiemDanh.resx">
+      <DependentUpon>DiemDanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CaiDatThamSo\ChucVu.resx">
+      <DependentUpon>ChucVu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\CaiDatThamSo\HDNK.resx">
       <DependentUpon>HDNK.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,11 +285,20 @@
     <EmbeddedResource Include="View\FormCaiDatThamSo.resx">
       <DependentUpon>FormCaiDatThamSo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FormKhoanChi.resx">
+      <DependentUpon>FormKhoanChi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FormPhieuChi.resx">
+      <DependentUpon>FormPhieuChi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormQuanLyHocSinh.resx">
       <DependentUpon>FormQuanLyHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormQuanLyNhanSu.resx">
+      <DependentUpon>FormQuanLyNhanSu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormQuanLyTaiKhoan.resx">
       <DependentUpon>FormQuanLyTaiKhoan.cs</DependentUpon>
@@ -256,7 +312,7 @@
     <EmbeddedResource Include="View\FormQuanLyVeThang.resx">
       <DependentUpon>FormQuanLyVeThang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormThongKeChiTheoThang.resx">
+    <EmbeddedResource Include="View\BaoCaoThongKe\FormThongKeChiTheoThang.resx">
       <DependentUpon>FormThongKeChiTheoThang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MainForm.resx">

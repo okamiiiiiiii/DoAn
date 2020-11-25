@@ -17,7 +17,7 @@ namespace DoAn.Controller
                 "gioitinh, " +
                 "ngaysinh, " +
                 "khoi.tenkhoi, " +
-                "tienmiengiam " +
+                "CONVERT(varchar, CAST( tienmiengiam AS money),1) " +
                 "from hocsinh, khoi " +
                 "where hocsinh.makhoi = khoi.makhoi");
         }

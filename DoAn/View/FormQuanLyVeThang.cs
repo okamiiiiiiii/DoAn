@@ -23,7 +23,7 @@ namespace DoAn.View
         {
             cbb_maHS.Enabled = true;
             txt_SoThang.Enabled = true;
-            txt_ThanhTien.Enabled = true;
+            comboBox1.Enabled = true;
             txt_tenHS.Enabled = false;
         }
 
@@ -31,7 +31,7 @@ namespace DoAn.View
         {
             cbb_maHS.Enabled = false;
             txt_SoThang.Enabled = false;
-            txt_ThanhTien.Enabled = false;
+            comboBox1.Enabled = false;
             txt_tenHS.Enabled = false;
         }
 
@@ -42,7 +42,7 @@ namespace DoAn.View
             cbb_maHS.Text = id;
             txt_SoThang.Text = data["sothangdangky"].ToString();
             txt_tenHS.Text = data["tenhocsinh"].ToString();
-            txt_ThanhTien.Text = data["gia"].ToString();
+            comboBox1.Text = data["tenloaivethang"].ToString();
 
             DisableAllControl();
             btn_Xoa.Enabled = true;
@@ -67,6 +67,11 @@ namespace DoAn.View
             {
                 listBox1.Items.Add(row["tenkhoi"].ToString());
             }
+            foreach (DataRow row in DataController.ExecTable("select * from loaivethang").Rows)
+            {
+                comboBox1.Items.Add(row["tenloaivethang"].ToString());
+            }
+            
             listBox1.SelectedIndex = 0;
             btn_Them.ForeColor = Color.White;
             btn_Them.BackColor = ThemeColor.PrimaryColor;
@@ -101,7 +106,7 @@ namespace DoAn.View
                 }
                 cbb_maHS.SelectedIndex = -1;
                 txt_tenHS.Clear();
-                txt_ThanhTien.Clear();
+                comboBox1.SelectedIndex = -1;
                 txt_SoThang.Clear();
 
                 btn_Xoa.Enabled = false;
@@ -117,13 +122,13 @@ namespace DoAn.View
                 {
                     MessageBox.Show("Chưa nhập số tháng đăng ký vé ăn", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else if (string.IsNullOrWhiteSpace(txt_ThanhTien.Text))
+                else if (comboBox1.SelectedIndex == -1)
                 {
-                    MessageBox.Show("Chưa nhập thành tiền", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Chưa nhập vé tháng", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
-                    string gia = txt_ThanhTien.Text;
+                    string gia = (comboBox1.SelectedIndex +1).ToString();
                     string mahocsinh = cbb_maHS.Text;
                     string ngaydangki = DateTime.Now.ToString("yyyy/MM/dd");
                     string sothang = txt_SoThang.Text;

@@ -34,10 +34,10 @@ namespace DoAn
             }
             else
             {
-                DataTable dtLogin = DataController.ExecTable("select tentaikhoan, matkhau from nhanvien");
+                DataTable dtLogin = DataController.ExecTable("select manv, tentaikhoan, matkhau from nhanvien");
                 foreach (DataRow row in dtLogin.Rows)
                 {
-                    if (txtMatKhau.Text == row["tentaikhoan"].ToString() && txtMatKhau.Text == row["matkhau"].ToString())
+                    if (txtTaiKhoan.Text == row["tentaikhoan"].ToString() && txtMatKhau.Text == row["matkhau"].ToString())
                     {
                         LoginUser.manv = int.Parse(row["manv"].ToString());
                         Form main = new MainForm();

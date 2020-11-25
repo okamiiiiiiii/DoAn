@@ -17,20 +17,42 @@ namespace DoAn
             InitializeComponent();
         }
 
+        private void Disable()
+        {
+            guna2DataGridView1.Columns["diemdanhvean"].ReadOnly = true;
+            guna2DataGridView1.Columns["vangmat"].ReadOnly = true;
+        }
+
+        private void Enable()
+        {
+            guna2DataGridView1.Columns["diemdanhvean"].ReadOnly = false;
+            guna2DataGridView1.Columns["vangmat"].ReadOnly = false;
+        }
+
+        private void ViewLoad()
+        {
+            string tenKhoiLop = listBox1.SelectedItem.ToString();
+            string day = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+            guna2DataGridView1.DataSource = Controller.DiemDanhHocSinh.fetch(tenKhoiLop, day);
+        }
+
         private void FormQuanLyVeAn_Load(object sender, EventArgs e)
         {
-            if (!ProgramStatusController.getThoiHanDiemDanh()) button1.Enabled = false;
-            guna2DataGridView1.Columns["diemdanhvean"].ReadOnly = false;
-            button1.ForeColor = Color.White;
-            button1.BackColor = ThemeColor.PrimaryColor;
-            groupBox1.ForeColor = ThemeColor.PrimaryColor;
-            groupBox2.ForeColor = ThemeColor.PrimaryColor;
-            label1.ForeColor = ThemeColor.PrimaryColor;
-            foreach(DataRow row in Controller.HocSinhController.fetchKhoi().Rows)
+            foreach (DataRow row in Controller.HocSinhController.fetchKhoi().Rows)
             {
                 listBox1.Items.Add(row["tenkhoi"].ToString());
             }
             listBox1.SelectedIndex = 0;
+            foreach (DataRow row in Controller.HinhThucAnController.index().Rows)
+            {
+                ((DataGridViewComboBoxColumn)guna2DataGridView1.Columns["diemdanhvean"]).Items.Add(row["tenhinhthucan"].ToString());
+            }
+            timer1.Start();
+            Enable();
+            
+            groupBox1.ForeColor = ThemeColor.PrimaryColor;
+            groupBox2.ForeColor = ThemeColor.PrimaryColor;
+            label1.ForeColor = ThemeColor.PrimaryColor;
             dateTimePicker1.MaxDate = DateTime.Now;
         }
 
@@ -50,33 +72,8 @@ namespace DoAn
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             string tenKhoiLop = listBox1.SelectedItem.ToString();
-            string day = dateTimePicker1.Value.ToString("yyyy-MM-dd");
-            string query = "select theodoixuatan.mahocsinh, " +
-                "hocsinh.tenhocsinh, " +
-                "hinhthucan.tenhinhthucan " +
-                "from hocsinh, theodoixuatan, hinhthucan, khoi " +
-                "where theodoixuatan.mahocsinh = hocsinh.mahocsinh " +
-                "and theodoixuatan.mahinhthucan = hinhthucan.mahinhthucan " +
-                "and theodoixuatan.tg = '" + day + "' " +
-                "and hocsinh.makhoi = khoi.makhoi " +
-                "and khoi.tenkhoi = N'" + tenKhoiLop +"'";
-            guna2DataGridView1.DataSource = DataController.ExecTable(query);
-
-            if (dateTimePicker1.Value.ToString("yyyy-MM-dd") != DateTime.Today.ToString("yyyy-MM-dd"))
-            {
-                guna2DataGridView1.Columns["diemdanhvean"].ReadOnly = false;
-                button1.Enabled = false;
-            }
-            else if (!ProgramStatusController.LopDaDiemDanh.Contains(tenKhoiLop))
-            {
-                guna2DataGridView1.Columns["diemdanhvean"].ReadOnly = true;
-                button1.Enabled = true;
-            }
-            else
-            {
-                guna2DataGridView1.Columns["diemdanhvean"].ReadOnly = false;
-                button1.Enabled = false;
-            }
+            string day = DateTime.Today.ToString("yyyy-MM-dd");
+            guna2DataGridView1.DataSource =  Controller.DiemDanhHocSinh.fetch(tenKhoiLop, day);
         }
 
         private void guna2DataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -98,68 +95,49 @@ namespace DoAn
                     "SET mahinhthucan = " + mahinhthucan + " "  +
                     "WHERE maxuatan = " + maxuatan;
                 DataController.Execute(query3);
+                ViewLoad();
+                guna2DataGridView1.Rows[e.RowIndex].Selected = true;
             }
 
-            if (guna2DataGridView1.Columns[e.ColumnIndex].Name == "vangmat")
+            if (guna2DataGridView1.Columns[e.ColumnIndex].Name == "vangmat" && guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "True")
             {
-                int vang = Convert.ToInt32(guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
-                MessageBox.Show(vang.ToString());
-                DataGridViewComboBoxCell data = (DataGridViewComboBoxCell)guna2DataGridView1.Rows[e.RowIndex].Cells["diemdanhvean"];
+                Console.WriteLine(guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
+                DataGridViewRow dataRow = guna2DataGridView1.Rows[e.RowIndex];
+                string mahocsinh = dataRow.Cells["mahocsinh"].Value.ToString();
+                Controller.DiemDanhHocSinh.DiemDanhVang(mahocsinh);
+                ViewLoad();
+                guna2DataGridView1.Rows[e.RowIndex].Selected = true;
             }
+            else if (guna2DataGridView1.Columns[e.ColumnIndex].Name == "vangmat" && guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "False")
+            {
+                DataGridViewRow dataRow = guna2DataGridView1.Rows[e.RowIndex];
+                string mahocsinh = dataRow.Cells["mahocsinh"].Value.ToString();
+                Controller.DiemDanhHocSinh.DiemDanhCoMat(mahocsinh);
+                ViewLoad();
+                guna2DataGridView1.Rows[e.RowIndex].Selected = true;
+            }
+            
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            string day = dateTimePicker1.Value.ToString("yyyy-MM-dd");
-            string tenKhoiLop = listBox1.SelectedItem.ToString();
-            if (dateTimePicker1.Value.ToString("yyyy-MM-dd") != DateTime.Today.ToString("yyyy-MM-dd"))
+            int hour = DateTime.Now.Hour;
+            Console.WriteLine(hour);
+            if (hour >= 6 && hour <= 9)
             {
-                Console.WriteLine("if 1");
-                guna2DataGridView1.Columns["diemdanhvean"].ReadOnly = false;
-                button1.Enabled = false;
-            }
-            else if (ProgramStatusController.LopDaDiemDanh.Contains(tenKhoiLop))
-            {
-                Console.WriteLine("if 2");
-                guna2DataGridView1.Columns["diemdanhvean"].ReadOnly = false;
-                button1.Enabled = false;
-            }
-            else if(!ProgramStatusController.getThoiHanDiemDanh())
-            {
-                Console.WriteLine("if 3");
-                guna2DataGridView1.Columns["diemdanhvean"].ReadOnly = false;
-                button1.Enabled = false;
+                label4.Text = "Đang trong thời gian điểm danh";
             }
             else
             {
-                guna2DataGridView1.Columns["diemdanhvean"].ReadOnly = true;
-                button1.Enabled = true;
+                Disable();
+                label4.Text = "Đã hết thời gian điểm danh";
+                timer1.Stop();
             }
-            string query = "select theodoixuatan.mahocsinh, " +
-                "hocsinh.tenhocsinh, " +
-                "hinhthucan.tenhinhthucan " +
-                "from hocsinh, theodoixuatan, hinhthucan, khoi " +
-                "where theodoixuatan.mahocsinh = hocsinh.mahocsinh " +
-                "and theodoixuatan.mahinhthucan = hinhthucan.mahinhthucan " +
-                "and theodoixuatan.tg = '" + day + "' " +
-                "and hocsinh.makhoi = khoi.makhoi " +
-                "and khoi.tenkhoi = N'" + tenKhoiLop + "'";
-
-            guna2DataGridView1.DataSource = DataController.ExecTable(query);
-
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            guna2DataGridView1.Columns["diemdanhvean"].ReadOnly = false;
-            button1.Enabled = false;
-            ProgramStatusController.LopDaDiemDanh.Add(listBox1.SelectedItem.ToString());
-        }
-
-        private void button1_EnabledChanged(object sender, EventArgs e)
-        {
-            if (button1.Enabled == true) label2.Text = "";
-            else label2.Text = "* Kết quả hiện tại đã được lưu";
+            guna2DataGridView1.CommitEdit(DataGridViewDataErrorContexts.Commit);
         }
     }
 }

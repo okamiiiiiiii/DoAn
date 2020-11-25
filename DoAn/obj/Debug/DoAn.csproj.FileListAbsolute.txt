@@ -73,3 +73,9 @@ D:\DoAn\DoAn\obj\Debug\DoAn.View.CaiDatThamSo.HinhThucAn.resources
 D:\DoAn\DoAn\obj\Debug\DoAn.View.CaiDatThamSo.HocPhi.resources
 D:\DoAn\DoAn\obj\Debug\DoAn.View.CaiDatThamSo.HDNK.resources
 D:\DoAn\DoAn\obj\Debug\DoAn.View.CaiDatThamSo.Kho.resources
+D:\DoAn\DoAn\obj\Debug\DoAn.View.CaiDatThamSo.ChucVu1.resources
+D:\DoAn\DoAn\bin\Debug\DocX.dll
+D:\DoAn\DoAn\obj\Debug\DoAn.View.FormQuanLyNhanSu.resources
+D:\DoAn\DoAn\obj\Debug\DoAn.View.BaoCaoThongKe.DiemDanh.resources
+D:\DoAn\DoAn\obj\Debug\DoAn.View.FormPhieuChi.resources
+D:\DoAn\DoAn\obj\Debug\DoAn.View.FormKhoanChi.resources

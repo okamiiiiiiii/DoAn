@@ -12,7 +12,7 @@ namespace DoAn.Controller
     {
         static public DataTable index()
         {
-            return DataController.ExecTable("select mahdnk, tenhdnk, chiphidukien, ghichu, tgthuchien from hoatdongngoaikhoa");
+            return DataController.ExecTable("select mahdnk, tenhdnk, CONVERT(varchar, CAST( chiphidukien AS money),1), ghichu, tgthuchien from hoatdongngoaikhoa");
         }
 
         static public DataRow findOneById(string id)

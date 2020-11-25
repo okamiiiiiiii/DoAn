@@ -13,21 +13,24 @@ namespace DoAn.Controller
         {
             return DataController.ExecTable("select " +
                 "mavethang, " +
-                "gia, " +
+                "CONVERT(varchar, CAST( gia AS money),1), " +
                 "vethang.mahocsinh, " +
                 "tenhocsinh, " +
                 "ngaydangky, " +
                 "sothangdangky " +
-                "from vethang, hocsinh " +
+                "tenloaivethang " +
+                "from vethang, hocsinh, loaivethang " +
                 "where hocsinh.mahocsinh = vethang.mahocsinh " +
+                "and vethang.maloaivethang = loaivethang.maloaivethang " +
                 "and hocsinh.makhoi = " + makhoi);
         }
 
         static public DataRow findOneById(string id)
         {
             DataTable dt = DataController.ExecTable("select * " +
-                "from hocsinh, vethang " +
+                "from hocsinh, vethang, loaivethang " +
                 "where vethang.mahocsinh = hocsinh.mahocsinh " +
+                "and vethang.maloaivethang = loaivethang.maloaivethang " +
                 "and vethang.mavethang = " + id);
             return dt.Rows[0];
         }

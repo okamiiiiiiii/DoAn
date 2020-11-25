@@ -1,6 +1,6 @@
 ﻿namespace DoAn.View.CaiDatThamSo
 {
-    partial class ThongSoLuong
+    partial class ChucVu1
     {
         /// <summary>
         /// Required designer variable.
@@ -32,9 +32,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.iddulieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tendulieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giatri = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.machucvu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenchucvu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,11 +57,10 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.guna2DataGridView1.ColumnHeadersHeight = 27;
+            this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iddulieu,
-            this.tendulieu,
-            this.giatri});
+            this.machucvu,
+            this.tenchucvu});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -75,7 +76,7 @@
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowTemplate.Height = 24;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(881, 426);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(424, 671);
             this.guna2DataGridView1.TabIndex = 0;
             this.guna2DataGridView1.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -89,7 +90,7 @@
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 27;
             this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -99,49 +100,77 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.guna2DataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellValueChanged);
+            this.guna2DataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellClick);
             // 
-            // iddulieu
+            // machucvu
             // 
-            this.iddulieu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.iddulieu.DataPropertyName = "iddulieu";
-            this.iddulieu.HeaderText = "ID";
-            this.iddulieu.Name = "iddulieu";
-            this.iddulieu.ReadOnly = true;
-            this.iddulieu.Width = 57;
+            this.machucvu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.machucvu.HeaderText = "Id";
+            this.machucvu.Name = "machucvu";
+            this.machucvu.Width = 55;
             // 
-            // tendulieu
+            // tenchucvu
             // 
-            this.tendulieu.DataPropertyName = "tendulieu";
-            this.tendulieu.HeaderText = "Thông số";
-            this.tendulieu.Name = "tendulieu";
-            this.tendulieu.ReadOnly = true;
+            this.tenchucvu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tenchucvu.HeaderText = "Tên chức vụ";
+            this.tenchucvu.Name = "tenchucvu";
             // 
-            // giatri
+            // label1
             // 
-            this.giatri.DataPropertyName = "giatri";
-            this.giatri.HeaderText = "Giá trị";
-            this.giatri.Name = "giatri";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(442, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(937, 27);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "*Tất cả các chức năng mới sẽ thêm vào đều không sử dụng được chức năng gì của chư" +
+    "ơng trình.";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // ThongSoLuong
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(444, 148);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 19);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Tên chức vụ:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(545, 145);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(390, 27);
+            this.textBox1.TabIndex = 3;
+            // 
+            // ChucVu1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(905, 544);
+            this.ClientSize = new System.Drawing.Size(947, 688);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2DataGridView1);
-            this.Name = "ThongSoLuong";
-            this.Text = "ThongSoLuong";
-            this.Load += new System.EventHandler(this.ThongSoLuong_Load);
+            this.Name = "ChucVu1";
+            this.Text = "ChucVu1";
+            this.Load += new System.EventHandler(this.ChucVu1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iddulieu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tendulieu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn giatri;
+        private System.Windows.Forms.DataGridViewTextBoxColumn machucvu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenchucvu;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

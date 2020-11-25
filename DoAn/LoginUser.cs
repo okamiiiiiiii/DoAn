@@ -12,7 +12,7 @@ namespace DoAn
         public static int manv = 1;
         public static DataRow UserData()
         {
-            return DataController.ExecTable("select * from nhanvien where manv = " + manv.ToString()).Rows[0];
+            return DataController.ExecTable("select * from nhanvien, chucvu where nhanvien.machucvu = chucvu.machucvu and manv = " + manv.ToString()).Rows[0];
         }
     }
 }

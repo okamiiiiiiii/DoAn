@@ -85,5 +85,15 @@ namespace DoAn
         {
             OpenChildForm(new View.CaiDatThamSo.Kho(), sender);
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_ChucVu_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new View.CaiDatThamSo.ChucVu1(), sender);
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace DoAn.Controller
     {
         static public DataTable index()
         {
-            return DataController.ExecTable("select * from hinhthucan");
+            return DataController.ExecTable("select mahinhthucan, tenhinhthucan, CONVERT(varchar, CAST( giatien AS money),1) as giatien from hinhthucan");
         }
 
         static public DataRow findOneById(string id)
