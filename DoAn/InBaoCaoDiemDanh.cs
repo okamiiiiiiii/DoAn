@@ -51,7 +51,7 @@ namespace DoAn
 
         static private Table CreateAndInsertInvoiceTableAfter(Table t, ref DocX document)
         {
-            var data = DataController.ExecTable("select DISTINCT hocsinh.mahocsinh, tenhocsinh, tenhinhthucan, vangmat from theodoixuatan, hocsinh, hinhthucan, nhanvien, khoi, phutrach where hocsinh.mahocsinh = theodoixuatan.mahocsinh and hinhthucan.mahinhthucan = theodoixuatan.mahinhthucan and hocsinh.makhoi = khoi.makhoi and phutrach.makhoi = khoi.makhoi and nhanvien.manv = phutrach.manv and khoi.makhoi =1 and tg = '2020-11-24'");
+            var data = DataController.ExecTable("select DISTINCT hocsinh.mahocsinh, tenhocsinh, tenhinhthucan, vangmat from theodoixuatan, hocsinh, hinhthucan, nhanvien, khoi, phutrach where hocsinh.mahocsinh = theodoixuatan.mahocsinh and hinhthucan.mahinhthucan = theodoixuatan.mahinhthucan and hocsinh.makhoi = khoi.makhoi and phutrach.makhoi = khoi.makhoi and nhanvien.manv = phutrach.manv and khoi.makhoi =1 and tg = '2020-11-25'");
 
             var invoiceTable = t.InsertTableAfterSelf(data.Rows.Count + 1, data.Columns.Count);
             invoiceTable.Design = TableDesign.LightGridAccent1;

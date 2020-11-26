@@ -33,11 +33,41 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AngleSharp, Version=0.9.9.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
+      <HintPath>..\packages\AngleSharp.0.9.11\lib\net45\AngleSharp.dll</HintPath>
+    </Reference>
     <Reference Include="DocX, Version=1.0.0.19, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DocX.1.0.0.19\lib\net40\DocX.dll</HintPath>
     </Reference>
+    <Reference Include="DotNetZip, Version=1.13.3.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.13.3\lib\net40\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="Gnostice.Controls.WinForms, Version=20.1.629.1868, Culture=neutral, PublicKeyToken=fc8cb3ab6a24df63, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gnostice.DocumentStudio.WinForms.Free.20.1.629\lib\net45\Gnostice.Controls.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Gnostice.Core, Version=20.1.629.1868, Culture=neutral, PublicKeyToken=fc8cb3ab6a24df63, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gnostice.DocumentStudio.Foundation.20.1.629\lib\net45\Gnostice.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Gnostice.Documents, Version=20.1.629.1868, Culture=neutral, PublicKeyToken=fc8cb3ab6a24df63, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gnostice.DocumentStudio.Foundation.20.1.629\lib\net45\Gnostice.Documents.dll</HintPath>
+    </Reference>
+    <Reference Include="Gnostice.Graphics.GDIPlus, Version=20.1.629.1868, Culture=neutral, PublicKeyToken=fc8cb3ab6a24df63, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gnostice.DocumentStudio.Foundation.20.1.629\lib\net45\Gnostice.Graphics.GDIPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Gnostice.Graphics.Skia, Version=20.1.629.1868, Culture=neutral, PublicKeyToken=fc8cb3ab6a24df63, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gnostice.DocumentStudio.Foundation.20.1.629\lib\net45\Gnostice.Graphics.Skia.dll</HintPath>
+    </Reference>
+    <Reference Include="Gnostice.ImageEngine, Version=20.1.629.1868, Culture=neutral, PublicKeyToken=fc8cb3ab6a24df63, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gnostice.DocumentStudio.Foundation.20.1.629\lib\net45\Gnostice.ImageEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Gnostice.PageManager, Version=20.1.629.1868, Culture=neutral, PublicKeyToken=fc8cb3ab6a24df63, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gnostice.DocumentStudio.WinForms.Free.20.1.629\lib\net45\Gnostice.PageManager.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.0.9, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.0.9\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -54,6 +84,7 @@
   <ItemGroup>
     <Compile Include="Controller\AccountController.cs" />
     <Compile Include="Controller\BaoCaoThongKe.cs" />
+    <Compile Include="Controller\BGController.cs" />
     <Compile Include="Controller\ChucVuController.cs" />
     <Compile Include="Controller\DiemDanhHocSinh.cs" />
     <Compile Include="Controller\DuLieuController.cs" />
@@ -68,9 +99,23 @@
     <Compile Include="Controller\NhanSuController.cs" />
     <Compile Include="Controller\NhanVienController.cs" />
     <Compile Include="Controller\OutputFile.cs" />
+    <Compile Include="Controller\PhieuBanGiaoController.cs" />
     <Compile Include="Controller\PhieuChiController.cs" />
+    <Compile Include="Controller\PTCKHController.cs" />
+    <Compile Include="Controller\ThuNgoaiController.cs" />
     <Compile Include="Controller\VeThangController.cs" />
+    <Compile Include="FormWord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWord.Designer.cs">
+      <DependentUpon>FormWord.cs</DependentUpon>
+    </Compile>
     <Compile Include="InBaoCaoDiemDanh.cs" />
+    <Compile Include="IO\baocaodoanhchi.cs" />
+    <Compile Include="IO\hoadonthang.cs" />
+    <Compile Include="IO\phieubangiao.cs" />
+    <Compile Include="IO\thongkethangnay.cs" />
+    <Compile Include="IO\thungoai.cs" />
     <Compile Include="View\BaoCaoThongKe\DiemDanh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +172,12 @@
     <Compile Include="View\CaiDatThamSo\ThongSoLuong.Designer.cs">
       <DependentUpon>ThongSoLuong.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormBanGiao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormBanGiao.Designer.cs">
+      <DependentUpon>FormBanGiao.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormBaoCaoThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +213,12 @@
     </Compile>
     <Compile Include="View\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormPhieuBanGiao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormPhieuBanGiao.Designer.cs">
+      <DependentUpon>FormPhieuBanGiao.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormPhieuChi.cs">
       <SubType>Form</SubType>
@@ -244,12 +301,34 @@
       <DependentUpon>FormQuanLyChi.cs</DependentUpon>
     </Compile>
     <Compile Include="ThemeColor.cs" />
+    <Compile Include="View\PhuThuKeHoach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PhuThuKeHoach.Designer.cs">
+      <DependentUpon>PhuThuKeHoach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QuanLyKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QuanLyKho.Designer.cs">
+      <DependentUpon>QuanLyKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ThuNgoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ThuNgoai.Designer.cs">
+      <DependentUpon>ThuNgoai.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\TienAn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\TienAn.Designer.cs">
       <DependentUpon>TienAn.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormWord.resx">
+      <DependentUpon>FormWord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="View\BaoCaoThongKe\DiemDanh.resx">
       <DependentUpon>DiemDanh.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,6 +353,9 @@
     <EmbeddedResource Include="View\CaiDatThamSo\ThongSoLuong.resx">
       <DependentUpon>ThongSoLuong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FormBanGiao.resx">
+      <DependentUpon>FormBanGiao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormBaoCaoThongKe.resx">
       <DependentUpon>FormBaoCaoThongKe.cs</DependentUpon>
     </EmbeddedResource>
@@ -291,6 +373,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormPhieuBanGiao.resx">
+      <DependentUpon>FormPhieuBanGiao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormPhieuChi.resx">
       <DependentUpon>FormPhieuChi.cs</DependentUpon>
@@ -329,6 +414,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormQuanLyChi.resx">
       <DependentUpon>FormQuanLyChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PhuThuKeHoach.resx">
+      <DependentUpon>PhuThuKeHoach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QuanLyKho.resx">
+      <DependentUpon>QuanLyKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ThuNgoai.resx">
+      <DependentUpon>ThuNgoai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\TienAn.resx">
       <DependentUpon>TienAn.cs</DependentUpon>

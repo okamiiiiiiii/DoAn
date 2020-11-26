@@ -123,7 +123,7 @@ namespace DoAn
         {
             int hour = DateTime.Now.Hour;
             Console.WriteLine(hour);
-            if (hour >= 6 && hour <= 9)
+            if (hour >= 6 && hour < 9)
             {
                 label4.Text = "Đang trong thời gian điểm danh";
             }

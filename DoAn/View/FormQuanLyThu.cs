@@ -39,6 +39,14 @@ namespace DoAn
             button5.ForeColor = Color.White;
             button5.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
 
+            button1.BackColor = ThemeColor.PrimaryColor;
+            button1.ForeColor = Color.White;
+            button1.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+
+            button2.BackColor = ThemeColor.PrimaryColor;
+            button2.ForeColor = Color.White;
+            button2.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+
             OpenChildForm(new PhuThu(), sender);
         }
 
@@ -75,6 +83,16 @@ namespace DoAn
         private void button5_Click(object sender, EventArgs e)
         {
             OpenChildForm(new TienAn(), sender);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new View.PhuThuKeHoach(), sender);
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new View.ThuNgoai(), sender);
         }
     }
 }

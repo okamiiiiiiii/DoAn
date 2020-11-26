@@ -53,7 +53,7 @@ namespace DoAn
 
         private void FormCaiDatThamSo_Load(object sender, EventArgs e)
         {
-            
+            OpenChildForm(new CaiDatThamSo.LoaiPhuThu(), sender);
         }
 
         private void btnLoaiPhuThu_Click(object sender, EventArgs e)

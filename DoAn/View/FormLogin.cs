@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Gnostice.Controls.WinForms;
 
 namespace DoAn
 {
@@ -24,31 +25,33 @@ namespace DoAn
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtTaiKhoan.Text))
-            {
-                MessageBox.Show("Chưa nhập tài khoản", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (string.IsNullOrWhiteSpace(txtMatKhau.Text))
-            {
-                MessageBox.Show("Chưa nhập mật khẩu", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                DataTable dtLogin = DataController.ExecTable("select manv, tentaikhoan, matkhau from nhanvien");
-                foreach (DataRow row in dtLogin.Rows)
-                {
-                    if (txtTaiKhoan.Text == row["tentaikhoan"].ToString() && txtMatKhau.Text == row["matkhau"].ToString())
-                    {
-                        LoginUser.manv = int.Parse(row["manv"].ToString());
-                        Form main = new MainForm();
-                        main.Show();
-                        this.Hide();
-                        return;
-                    }
-                }
-                MessageBox.Show("Nhập sai tài khoản hoặc mật khẩu", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            
+            //if (string.IsNullOrWhiteSpace(txtTaiKhoan.Text))
+            //{
+            //    MessageBox.Show("Chưa nhập tài khoản", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //}
+            //else if (string.IsNullOrWhiteSpace(txtMatKhau.Text))
+            //{
+            //    MessageBox.Show("Chưa nhập mật khẩu", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //}
+            //else
+            //{
+            //    DataTable dtLogin = DataController.ExecTable("select manv, tentaikhoan, matkhau from nhanvien");
+            //    foreach (DataRow row in dtLogin.Rows)
+            //    {
+            //        if (txtTaiKhoan.Text == row["tentaikhoan"].ToString() && txtMatKhau.Text == row["matkhau"].ToString())
+            //        {
+            //            LoginUser.manv = int.Parse(row["manv"].ToString());
+            //            Form main = new MainForm();
+            //            main.Show();
+            //            this.Hide();
+            //            return;
+            //        }
+            //    }
+            //    MessageBox.Show("Nhập sai tài khoản hoặc mật khẩu", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //}
+            NavigationPane pane = new NavigationPane();
+            pane.Activate();
+
         }
 
         private void FormLogin_Load(object sender, EventArgs e)

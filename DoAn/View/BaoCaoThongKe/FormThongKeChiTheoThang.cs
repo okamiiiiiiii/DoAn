@@ -42,5 +42,12 @@ namespace DoAn
         {
             clearDataGridView();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string id = guna2DataGridView1.CurrentRow.Cells["td"].Value.ToString();
+            FormWord frm = new FormWord(id, 4);
+            frm.Show();
+        }
     }
 }

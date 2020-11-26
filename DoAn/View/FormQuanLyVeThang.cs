@@ -22,7 +22,6 @@ namespace DoAn.View
         private void EnableAllControl()
         {
             cbb_maHS.Enabled = true;
-            txt_SoThang.Enabled = true;
             comboBox1.Enabled = true;
             txt_tenHS.Enabled = false;
         }
@@ -30,7 +29,6 @@ namespace DoAn.View
         private void DisableAllControl()
         {
             cbb_maHS.Enabled = false;
-            txt_SoThang.Enabled = false;
             comboBox1.Enabled = false;
             txt_tenHS.Enabled = false;
         }
@@ -40,7 +38,6 @@ namespace DoAn.View
             string id = guna2DataGridView1.CurrentRow.Cells["mavethang"].Value.ToString();
             DataRow data = Controller.VeThangController.findOneById(id);
             cbb_maHS.Text = id;
-            txt_SoThang.Text = data["sothangdangky"].ToString();
             txt_tenHS.Text = data["tenhocsinh"].ToString();
             comboBox1.Text = data["tenloaivethang"].ToString();
 
@@ -107,7 +104,6 @@ namespace DoAn.View
                 cbb_maHS.SelectedIndex = -1;
                 txt_tenHS.Clear();
                 comboBox1.SelectedIndex = -1;
-                txt_SoThang.Clear();
 
                 btn_Xoa.Enabled = false;
                 btn_HuyThem.Visible = true;
@@ -118,10 +114,6 @@ namespace DoAn.View
                 {
                     MessageBox.Show("Chưa nhập mã học sinh", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else if (string.IsNullOrWhiteSpace(txt_SoThang.Text))
-                {
-                    MessageBox.Show("Chưa nhập số tháng đăng ký vé ăn", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
                 else if (comboBox1.SelectedIndex == -1)
                 {
                     MessageBox.Show("Chưa nhập vé tháng", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -131,8 +123,7 @@ namespace DoAn.View
                     string gia = (comboBox1.SelectedIndex +1).ToString();
                     string mahocsinh = cbb_maHS.Text;
                     string ngaydangki = DateTime.Now.ToString("yyyy/MM/dd");
-                    string sothang = txt_SoThang.Text;
-                    Controller.VeThangController.addVeThang(gia, mahocsinh, ngaydangki, sothang);
+                    Controller.VeThangController.addVeThang(gia, mahocsinh, ngaydangki);
                 }
                 ViewLoad();
             }
@@ -158,6 +149,14 @@ namespace DoAn.View
                 Controller.VeThangController.deleteVeThang(id);
             }
             ViewLoad();
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+
+
         }
     }
 }

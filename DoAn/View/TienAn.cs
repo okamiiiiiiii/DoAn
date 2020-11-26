@@ -143,5 +143,12 @@ namespace DoAn
                 guna2DataGridView1.DataSource = DataController.ExecTable(str);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string id = guna2DataGridView1.CurrentRow.Cells["id"].Value.ToString();
+            FormWord frm = new FormWord(id, 2);
+            frm.Show();
+        }
     }
 }

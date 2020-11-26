@@ -14,8 +14,7 @@ namespace DoAn.Controller
             return DataController.ExecTable("select " +
                 "manv, " +
                 "tennv, " +
-                "tentaikhoan, " +
-                "matkhau " +
+                "tentaikhoan " +
                 "from nhanvien " +
                 "where nhanvien.tentaikhoan IS NOT NULL");
         }

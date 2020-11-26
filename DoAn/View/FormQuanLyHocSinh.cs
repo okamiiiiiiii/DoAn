@@ -31,6 +31,7 @@ namespace DoAn
             cbb_GT.Enabled = true;
             cbb_makhoi.Enabled = true;
             dtP_Birth.Enabled = true;
+            textBox1.Enabled = true;
         }
 
         private void DisableAllControl()
@@ -45,6 +46,7 @@ namespace DoAn
             cbb_GT.Enabled = false;
             cbb_makhoi.Enabled = false;
             dtP_Birth.Enabled = false;
+            textBox1.Enabled = false;
         }
 
         private void getInfo()
@@ -85,7 +87,7 @@ namespace DoAn
         {
             if (!addMode)
             {
-                txt_mahs.Text = (int.Parse(guna2DataGridView1.Rows[guna2DataGridView1.Rows.Count - 1].Cells[0].Value.ToString()) + 1).ToString();
+                txt_mahs.Text = (int.Parse(guna2DataGridView1.Rows[guna2DataGridView1.Rows.Count - 1].Cells["mahocsinh"].Value.ToString()) + 1).ToString();
                 txt_ten.Clear();
                 txt_tenPhuHuynh.Clear();
                 txt_DiaChi.Clear();
@@ -95,6 +97,7 @@ namespace DoAn
                 dtP_Birth.Value = dtP_Birth.MaxDate;
                 txt_TienMienGiam.Clear();
                 txt_GhiChu.Clear();
+                textBox1.Text = DateTime.Now.Year.ToString();
 
                 EnableAllControl();
 
@@ -181,6 +184,10 @@ namespace DoAn
                 {
                     MessageBox.Show("Chưa nhập tiền miễn giảm", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+                else if (string.IsNullOrWhiteSpace(textBox1.Text))
+                {
+                    MessageBox.Show("Chưa nhập năm nhập học", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 else
                 {
                     string ten = txt_ten.Text;
@@ -192,7 +199,8 @@ namespace DoAn
                     string tienmiengiam = txt_TienMienGiam.Text;
                     string ghichu = txt_GhiChu.Text;
                     int makhoi = cbb_makhoi.SelectedIndex + 1;
-                    Controller.HocSinhController.addHocsinh(ten, diachi, gioitinh, ngaysinh, tenphuhuynh, sdtphuhuynh, tienmiengiam, ghichu, makhoi);
+                    string namnhaphoc = textBox1.Text;
+                    Controller.HocSinhController.addHocsinh(ten, diachi, gioitinh, ngaysinh, tenphuhuynh, sdtphuhuynh, tienmiengiam, ghichu, makhoi, namnhaphoc);
                 }
                 ViewLoad();
             }
@@ -243,6 +251,10 @@ namespace DoAn
                 {
                     MessageBox.Show("Chưa nhập tiền miễn giảm", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+                else if (string.IsNullOrWhiteSpace(textBox1.Text))
+                {
+                    MessageBox.Show("Chưa nhập năm nhập học", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 else
                 {
                     string ten = txt_ten.Text;
@@ -255,8 +267,9 @@ namespace DoAn
                     string tienmiengiam = txt_TienMienGiam.Text;
                     string ghichu = txt_GhiChu.Text;
                     string id = txt_mahs.Text;
+                    string namnhaphoc = textBox1.Text;
 
-                    Controller.HocSinhController.updateHocSinh(id, ten, diachi, gioitinh, ngaysinh, tenphuhuynh, sdtphuhuynh, tienmiengiam, ghichu, makhoi);
+                    Controller.HocSinhController.updateHocSinh(id, ten, diachi, gioitinh, ngaysinh, tenphuhuynh, sdtphuhuynh, tienmiengiam, ghichu, makhoi, namnhaphoc);
                 }
                 ViewLoad();
             }
@@ -279,6 +292,11 @@ namespace DoAn
                 Controller.HocSinhController.deleteHocSinh(txt_mahs.Text);
             }
             ViewLoad();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

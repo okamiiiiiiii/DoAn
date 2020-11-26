@@ -32,13 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbb_Thang = new System.Windows.Forms.ComboBox();
-            this.cbb_Nam = new System.Windows.Forms.ComboBox();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mahocsinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenhocsinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +39,13 @@
             this.thang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trangthai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbb_Thang = new System.Windows.Forms.ComboBox();
+            this.cbb_Nam = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -119,18 +119,71 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // id
+            // 
+            this.id.DataPropertyName = "mahoadonthang";
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.Width = 54;
+            // 
+            // mahocsinh
+            // 
+            this.mahocsinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.mahocsinh.DataPropertyName = "mahocsinh";
+            this.mahocsinh.HeaderText = "Mã học sinh";
+            this.mahocsinh.Name = "mahocsinh";
+            // 
+            // tenhocsinh
+            // 
+            this.tenhocsinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tenhocsinh.DataPropertyName = "tenhocsinh";
+            this.tenhocsinh.HeaderText = "Tên học sinh";
+            this.tenhocsinh.Name = "tenhocsinh";
+            // 
+            // tonghocphi
+            // 
+            this.tonghocphi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tonghocphi.DataPropertyName = "tonghocphi";
+            this.tonghocphi.HeaderText = "Học phí";
+            this.tonghocphi.Name = "tonghocphi";
+            // 
+            // thang
+            // 
+            this.thang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.thang.DataPropertyName = "thang";
+            this.thang.HeaderText = "Tháng";
+            this.thang.Name = "thang";
+            this.thang.Width = 88;
+            // 
+            // nam
+            // 
+            this.nam.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nam.DataPropertyName = "nam";
+            this.nam.HeaderText = "Năm";
+            this.nam.Name = "nam";
+            this.nam.Width = 77;
+            // 
+            // trangthai
+            // 
+            this.trangthai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.trangthai.DataPropertyName = "tentrangthai";
+            this.trangthai.HeaderText = "Trạng thái";
+            this.trangthai.Name = "trangthai";
+            this.trangthai.Width = 116;
+            // 
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(911, 13);
+            this.button2.Location = new System.Drawing.Point(890, 3);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(220, 44);
             this.button2.TabIndex = 38;
-            this.button2.Text = "Sửa";
+            this.button2.Text = "Xem phiếu thu";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox1
             // 
@@ -196,58 +249,6 @@
             this.cbb_Nam.Size = new System.Drawing.Size(121, 37);
             this.cbb_Nam.TabIndex = 45;
             this.cbb_Nam.SelectedIndexChanged += new System.EventHandler(this.cbb_Nam_SelectedIndexChanged);
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "mahoadonthang";
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.Width = 54;
-            // 
-            // mahocsinh
-            // 
-            this.mahocsinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.mahocsinh.DataPropertyName = "mahocsinh";
-            this.mahocsinh.HeaderText = "Mã học sinh";
-            this.mahocsinh.Name = "mahocsinh";
-            // 
-            // tenhocsinh
-            // 
-            this.tenhocsinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tenhocsinh.DataPropertyName = "tenhocsinh";
-            this.tenhocsinh.HeaderText = "Tên học sinh";
-            this.tenhocsinh.Name = "tenhocsinh";
-            // 
-            // tonghocphi
-            // 
-            this.tonghocphi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tonghocphi.DataPropertyName = "tonghocphi";
-            this.tonghocphi.HeaderText = "Học phí";
-            this.tonghocphi.Name = "tonghocphi";
-            // 
-            // thang
-            // 
-            this.thang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.thang.DataPropertyName = "thang";
-            this.thang.HeaderText = "Tháng";
-            this.thang.Name = "thang";
-            this.thang.Width = 88;
-            // 
-            // nam
-            // 
-            this.nam.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nam.DataPropertyName = "nam";
-            this.nam.HeaderText = "Năm";
-            this.nam.Name = "nam";
-            this.nam.Width = 77;
-            // 
-            // trangthai
-            // 
-            this.trangthai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.trangthai.DataPropertyName = "tentrangthai";
-            this.trangthai.HeaderText = "Trạng thái";
-            this.trangthai.Name = "trangthai";
-            this.trangthai.Width = 116;
             // 
             // TienAn
             // 

@@ -18,10 +18,10 @@ namespace DoAn.Controller
                 "tennv, " +
                 "tentrangthaiphieuchi ," +
                 "SUM(tttienchi.thanhtien) as tongtien " +
-                "from phieuchi, nhanvien, trangthaiphieuchi, tttienchi " +
+                "from phieuchi left join tttienchi on tttienchi.maphieuchi = phieuchi.maphieuchi, " +
+                "nhanvien, trangthaiphieuchi " +
                 "where phieuchi.manv = nhanvien.manv " +
                 "and phieuchi.matrangthaiphieuchi = trangthaiphieuchi.matrangthaiphieuchi " +
-                "and tttienchi.maphieuchi = phieuchi.maphieuchi " +
                 "group by phieuchi.maphieuchi, tenphieuchi, tg, tennv, tentrangthaiphieuchi");
         }
 

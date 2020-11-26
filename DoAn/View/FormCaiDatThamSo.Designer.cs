@@ -100,6 +100,7 @@
             this.btn_Kho.TabIndex = 6;
             this.btn_Kho.Text = "Quản lý kho";
             this.btn_Kho.UseVisualStyleBackColor = true;
+            this.btn_Kho.Visible = false;
             this.btn_Kho.Click += new System.EventHandler(this.btn_Kho_Click);
             // 
             // btn_HDNK
@@ -114,6 +115,7 @@
             this.btn_HDNK.TabIndex = 5;
             this.btn_HDNK.Text = "Hoạt động ngoại khóa";
             this.btn_HDNK.UseVisualStyleBackColor = true;
+            this.btn_HDNK.Visible = false;
             this.btn_HDNK.Click += new System.EventHandler(this.btn_HDNK_Click);
             // 
             // btn_HocPhi

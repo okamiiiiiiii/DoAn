@@ -44,7 +44,7 @@ namespace DoAn
                 "phuthu.tenphuthu, " +
                 "phuthu.thanhtien, " +
                 "phuthu.maloai, " +
-                "phuthu.nguoithu " +
+                "phuthu.nguoilapkhoanthu " +
                 "from phuthu inner join hocsinh on " +
                 "hocsinh.mahocsinh = phuthu.mahocsinh; ");
             DataTable dtHS = DataController.ExecTable("select * from hocsinh");
@@ -154,7 +154,7 @@ namespace DoAn
                     "phuthu.tenphuthu, " +
                     "phuthu.thanhtien, " +
                     "phuthu.maloai, " +
-                    "phuthu.nguoithu " +
+                    "phuthu.nguoilapkhoanthu " +
                     "from phuthu inner join hocsinh on " +
                     "hocsinh.mahocsinh = phuthu.mahocsinh; ");
                 }
@@ -169,6 +169,7 @@ namespace DoAn
 
                 txt_ten.Enabled = true;
                 txt_tien.Enabled = true;
+                cbb_type.Enabled = true;
             }
             else
             {
@@ -195,6 +196,7 @@ namespace DoAn
                     DataController.Execute("update phuthu set " +
                         "tenphuthu = N'"+ txt_ten.Text +"'" +
                         ", thanhtien = " + txt_tien.Text +
+                        ", maloai = " + (cbb_type.SelectedIndex +1) +
                         " where maphuthu = " + guna2DataGridView1.CurrentRow.Cells[0].Value.ToString());
 
                     guna2DataGridView1.DataSource = DataController.ExecTable("select " +
@@ -204,7 +206,7 @@ namespace DoAn
                     "phuthu.tenphuthu, " +
                     "phuthu.thanhtien, " +
                     "phuthu.maloai, " +
-                    "phuthu.nguoithu " +
+                    "phuthu.nguoilapkhoanthu " +
                     "from phuthu inner join hocsinh on " +
                     "hocsinh.mahocsinh = phuthu.mahocsinh; ");
 
@@ -233,7 +235,7 @@ namespace DoAn
                     "phuthu.tenphuthu, " +
                     "phuthu.thanhtien, " +
                     "phuthu.maloai, " +
-                    "phuthu.nguoithu " +
+                    "phuthu.nguoilapkhoanthu " +
                     "from phuthu inner join hocsinh on " +
                     "hocsinh.mahocsinh = phuthu.mahocsinh; ");
 
@@ -260,7 +262,7 @@ namespace DoAn
                     "phuthu.tenphuthu, " +
                     "phuthu.thanhtien, " +
                     "phuthu.maloai, " +
-                    "phuthu.nguoithu " +
+                    "phuthu.nguoilapkhoanthu " +
                     "from phuthu inner join hocsinh on " +
                     "hocsinh.mahocsinh = phuthu.mahocsinh; ");
 

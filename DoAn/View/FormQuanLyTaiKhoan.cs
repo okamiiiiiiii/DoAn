@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Web;
+using System.Security.Cryptography;
 namespace DoAn
 {
     public partial class FormQuanLyTaiKhoan : Form
@@ -24,6 +25,7 @@ namespace DoAn
             cbb_manv.Enabled = true;
             txt_MK.Enabled = true;
             txt_TK.Enabled = true;
+            comboBox1.Enabled = true;
         }
 
         private void DisableAllControl()
@@ -32,6 +34,7 @@ namespace DoAn
             txt_MK.Enabled = false;
             txt_ten.Enabled = false;
             txt_TK.Enabled = false;
+            comboBox1.Enabled = false;
         }
 
         private void getInfo()
@@ -41,8 +44,10 @@ namespace DoAn
 
             cbb_manv.Text = id;
             txt_TK.Text = data["tentaikhoan"].ToString();
+
             txt_MK.Text = data["matkhau"].ToString();
             txt_ten.Text = data["tennv"].ToString();
+            comboBox1.Text = data["tenchucvu"].ToString();
             
 
             DisableAllControl();
@@ -80,6 +85,11 @@ namespace DoAn
                     btn.ForeColor = Color.White;
                     btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
                 }
+            }
+            comboBox1.Items.Clear();
+            foreach(DataRow data in DataController.ExecTable("select * from chucvu").Rows)
+            {
+                comboBox1.Items.Add(data["tenchucvu"]);
             }
         }
 
@@ -160,6 +170,7 @@ namespace DoAn
                     string manv = guna2DataGridView1.CurrentRow.Cells["manv"].Value.ToString();
                     string taikhoan = txt_TK.Text;
                     string matkhau = txt_MK.Text;
+
                     Controller.AccountController.UpdateAccount(manv, taikhoan, matkhau);
                 }
                 ViewLoad();

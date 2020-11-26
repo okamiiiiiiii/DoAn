@@ -36,6 +36,10 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.mahocsinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenhocsinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diemdanhvean = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.vangmat = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,10 +47,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.mahocsinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenhocsinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diemdanhvean = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.vangmat = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
@@ -131,7 +131,6 @@
             this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2DataGridView1.MultiSelect = false;
             this.guna2DataGridView1.Name = "guna2DataGridView1";
-            this.guna2DataGridView1.ReadOnly = true;
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowTemplate.Height = 24;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -151,7 +150,7 @@
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 24;
-            this.guna2DataGridView1.ThemeStyle.ReadOnly = true;
+            this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -162,6 +161,38 @@
             this.guna2DataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentClick);
             this.guna2DataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellValueChanged);
             this.guna2DataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.guna2DataGridView1_DataError);
+            // 
+            // mahocsinh
+            // 
+            this.mahocsinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.mahocsinh.DataPropertyName = "mahocsinh";
+            this.mahocsinh.HeaderText = "Mã học sinh";
+            this.mahocsinh.Name = "mahocsinh";
+            this.mahocsinh.Width = 133;
+            // 
+            // tenhocsinh
+            // 
+            this.tenhocsinh.DataPropertyName = "tenhocsinh";
+            this.tenhocsinh.HeaderText = "Tên học sinh";
+            this.tenhocsinh.Name = "tenhocsinh";
+            // 
+            // diemdanhvean
+            // 
+            this.diemdanhvean.AutoComplete = false;
+            this.diemdanhvean.DataPropertyName = "tenhinhthucan";
+            this.diemdanhvean.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.diemdanhvean.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.diemdanhvean.HeaderText = "Điểm danh vé ăn";
+            this.diemdanhvean.Name = "diemdanhvean";
+            this.diemdanhvean.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // vangmat
+            // 
+            this.vangmat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.vangmat.DataPropertyName = "vangmat";
+            this.vangmat.HeaderText = "Vắng";
+            this.vangmat.Name = "vangmat";
+            this.vangmat.Width = 54;
             // 
             // dateTimePicker1
             // 
@@ -226,42 +257,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // mahocsinh
-            // 
-            this.mahocsinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.mahocsinh.DataPropertyName = "mahocsinh";
-            this.mahocsinh.HeaderText = "Mã học sinh";
-            this.mahocsinh.Name = "mahocsinh";
-            this.mahocsinh.ReadOnly = true;
-            this.mahocsinh.Width = 133;
-            // 
-            // tenhocsinh
-            // 
-            this.tenhocsinh.DataPropertyName = "tenhocsinh";
-            this.tenhocsinh.HeaderText = "Tên học sinh";
-            this.tenhocsinh.Name = "tenhocsinh";
-            this.tenhocsinh.ReadOnly = true;
-            // 
-            // diemdanhvean
-            // 
-            this.diemdanhvean.AutoComplete = false;
-            this.diemdanhvean.DataPropertyName = "tenhinhthucan";
-            this.diemdanhvean.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.diemdanhvean.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.diemdanhvean.HeaderText = "Điểm danh vé ăn";
-            this.diemdanhvean.Name = "diemdanhvean";
-            this.diemdanhvean.ReadOnly = true;
-            this.diemdanhvean.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // vangmat
-            // 
-            this.vangmat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.vangmat.DataPropertyName = "vangmat";
-            this.vangmat.HeaderText = "Vắng";
-            this.vangmat.Name = "vangmat";
-            this.vangmat.ReadOnly = true;
-            this.vangmat.Width = 54;
             // 
             // FormQuanLyVeAn
             // 

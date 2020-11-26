@@ -17,7 +17,7 @@ namespace DoAn.Controller
                 "gioitinh, " +
                 "ngaysinh, " +
                 "khoi.tenkhoi, " +
-                "CONVERT(varchar, CAST( tienmiengiam AS money),1) " +
+                "CONVERT(varchar, CAST( tienmiengiam AS money),1) as tienmiengiam " +
                 "from hocsinh, khoi " +
                 "where hocsinh.makhoi = khoi.makhoi");
         }
@@ -36,13 +36,14 @@ namespace DoAn.Controller
             return DataController.ExecTable("select * from khoi");
         }
 
-        static public void addHocsinh (string ten, string diachi, string gioitinh, string ngaysinh, string tenphuhuynh, string sdtphuhuynh, string tienmiengiam, string ghichu, int makhoi)
+        static public void addHocsinh (string ten, string diachi, string gioitinh, string ngaysinh, string tenphuhuynh, string sdtphuhuynh, string tienmiengiam, string ghichu, int makhoi, string namnhaphoc)
         {
             DataController.Execute("insert into hocsinh values (" +
                 "N'" + ten + "', " +
                 "N'" + diachi + "', " +
                 "N'" + gioitinh + "', " +
                 "'" + ngaysinh + "', " +
+                namnhaphoc + ", " +
                 "N'" + tenphuhuynh + "', " +
                 "'" + sdtphuhuynh + "', " +
                 "" + tienmiengiam + ", " +
@@ -50,7 +51,7 @@ namespace DoAn.Controller
                 makhoi + ")");
         }
 
-        static public void updateHocSinh(string id, string ten, string diachi, string gioitinh, string ngaysinh, string tenphuhuynh, string sdtphuhuynh, string tienmiengiam, string ghichu, int makhoi)
+        static public void updateHocSinh(string id, string ten, string diachi, string gioitinh, string ngaysinh, string tenphuhuynh, string sdtphuhuynh, string tienmiengiam, string ghichu, int makhoi, string namnhaphoc)
         {
             DataController.Execute("update hocsinh set " +
                         "tenhocsinh = N'" + ten + "', " +
@@ -61,7 +62,8 @@ namespace DoAn.Controller
                         "sdtphuhuynh = '" + sdtphuhuynh + "', " +
                         "makhoi = " + makhoi + ", " +
                         "tienmiengiam = " + tienmiengiam + ", " +
-                        "ghichumiengiam = N'" + ghichu + "' " +
+                        "ghichumiengiam = N'" + ghichu + "', " +
+                        "namnhaphoc = " + namnhaphoc + " " +
                         "where mahocsinh = " + id);
         }
 

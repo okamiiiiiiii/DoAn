@@ -13,11 +13,8 @@ namespace DoAn.Controller
         {
             return DataController.ExecTable("select " +
                 "mavethang, " +
-                "CONVERT(varchar, CAST( gia AS money),1), " +
-                "vethang.mahocsinh, " +
                 "tenhocsinh, " +
                 "ngaydangky, " +
-                "sothangdangky " +
                 "tenloaivethang " +
                 "from vethang, hocsinh, loaivethang " +
                 "where hocsinh.mahocsinh = vethang.mahocsinh " +
@@ -43,13 +40,13 @@ namespace DoAn.Controller
                 "where vethang.mahocsinh IS NULL");
         }
 
-        static public void addVeThang(string gia, string mahocsinh, string ngaydangki, string sothang)
+        static public void addVeThang(string gia, string mahocsinh, string ngaydangki)
         {
             DataController.Execute("insert into vethang values(" +
                 "" + gia + ", " +
                 "" + mahocsinh + ", " +
-                "'" + ngaydangki + "', " +
-                "" + sothang + ")");
+                "'" + DateTime.Today.ToString("yyyy-MM-dd") + "', " +
+                "" + "dbo.laymahoadonthangtheomahocsinh(" + mahocsinh +")" + ")");
         }
 
         static public void deleteVeThang(string id)

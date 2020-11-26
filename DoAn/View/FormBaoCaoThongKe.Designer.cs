@@ -76,6 +76,7 @@
             this.button4.TabIndex = 3;
             this.button4.Text = "Các phiếu thu";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Visible = false;
             // 
             // button3
             // 
@@ -88,6 +89,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Các phiếu bàn giao";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
             // 
             // button2
             // 
@@ -100,6 +102,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Các phiếu chi";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             // 
             // button1
             // 
@@ -121,6 +124,7 @@
             this.panelDesktopPane.Name = "panelDesktopPane";
             this.panelDesktopPane.Size = new System.Drawing.Size(929, 735);
             this.panelDesktopPane.TabIndex = 1;
+            this.panelDesktopPane.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktopPane_Paint);
             // 
             // FormBaoCaoThongKe
             // 

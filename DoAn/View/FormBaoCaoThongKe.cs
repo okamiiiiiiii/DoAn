@@ -45,7 +45,7 @@ namespace DoAn
         }
         private void FormBaoCaoThongKe_Load(object sender, EventArgs e)
         {
-
+            OpenChildForm(new FormThongKeChiTheoThang(), sender);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -56,6 +56,16 @@ namespace DoAn
         private void button5_Click(object sender, EventArgs e)
         {
             OpenChildForm(new View.BaoCaoThongKe.DiemDanh(), sender);
+        }
+
+        private void documentViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelDesktopPane_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

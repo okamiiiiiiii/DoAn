@@ -88,7 +88,8 @@ namespace DoAn.View
                 button6.Enabled = false;
 
                 textBox1.Clear();
-                comboBox1.SelectedIndex = -1;
+                comboBox1.Text = "chưa thanh toán";
+                comboBox1.Enabled = false;
             }
             else
             {
@@ -120,6 +121,11 @@ namespace DoAn.View
         {
             if(!editMode)
             {
+                if(guna2DataGridView1.CurrentRow.Cells["tentrangthai"].Value.ToString() == "đã thanh toán")
+                {
+                    ViewLoad();
+                    return;
+                }
                 editMode = true;
                 textBox1.Enabled = true;
                 comboBox1.Enabled = true;
@@ -186,6 +192,13 @@ namespace DoAn.View
             string id = guna2DataGridView1.CurrentRow.Cells["maphieuchi"].Value.ToString();
             View.FormKhoanChi form = new View.FormKhoanChi(id);
             form.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string id = guna2DataGridView1.CurrentRow.Cells["maphieuchi"].Value.ToString();
+            FormWord frm = new FormWord(id, 1);
+            frm.Show();
         }
     }
 }

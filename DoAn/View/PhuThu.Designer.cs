@@ -44,14 +44,13 @@
             this.txt_ten = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.btn_HuyThem = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mahocsinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenhocsinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenphuthu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thanhtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maloai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nguoithu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_HuyThem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -79,7 +78,6 @@
             this.guna2DataGridView1.ColumnHeadersHeight = 30;
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
-            this.mahocsinh,
             this.tenhocsinh,
             this.tenphuthu,
             this.thanhtien,
@@ -96,7 +94,7 @@
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(16, 267);
-            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -133,7 +131,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(908, 151);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(220, 44);
             this.button3.TabIndex = 34;
@@ -147,7 +145,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(908, 80);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(220, 44);
             this.button2.TabIndex = 33;
@@ -168,9 +166,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(16, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(884, 244);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
@@ -181,7 +179,7 @@
             // 
             this.cbb_type.FormattingEnabled = true;
             this.cbb_type.Location = new System.Drawing.Point(621, 68);
-            this.cbb_type.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbb_type.Margin = new System.Windows.Forms.Padding(4);
             this.cbb_type.Name = "cbb_type";
             this.cbb_type.Size = new System.Drawing.Size(253, 30);
             this.cbb_type.TabIndex = 9;
@@ -200,7 +198,7 @@
             // 
             this.cbb_hs.FormattingEnabled = true;
             this.cbb_hs.Location = new System.Drawing.Point(621, 26);
-            this.cbb_hs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbb_hs.Margin = new System.Windows.Forms.Padding(4);
             this.cbb_hs.Name = "cbb_hs";
             this.cbb_hs.Size = new System.Drawing.Size(253, 30);
             this.cbb_hs.TabIndex = 7;
@@ -218,7 +216,7 @@
             // txt_tien
             // 
             this.txt_tien.Location = new System.Drawing.Point(141, 65);
-            this.txt_tien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_tien.Margin = new System.Windows.Forms.Padding(4);
             this.txt_tien.Name = "txt_tien";
             this.txt_tien.Size = new System.Drawing.Size(220, 30);
             this.txt_tien.TabIndex = 5;
@@ -236,7 +234,7 @@
             // txt_ten
             // 
             this.txt_ten.Location = new System.Drawing.Point(141, 27);
-            this.txt_ten.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_ten.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ten.Name = "txt_ten";
             this.txt_ten.Size = new System.Drawing.Size(220, 30);
             this.txt_ten.TabIndex = 3;
@@ -257,7 +255,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(908, 5);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(220, 44);
             this.button1.TabIndex = 32;
@@ -265,18 +263,28 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btn_HuyThem
+            // 
+            this.btn_HuyThem.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_HuyThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_HuyThem.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_HuyThem.Location = new System.Drawing.Point(908, 215);
+            this.btn_HuyThem.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_HuyThem.Name = "btn_HuyThem";
+            this.btn_HuyThem.Size = new System.Drawing.Size(220, 44);
+            this.btn_HuyThem.TabIndex = 36;
+            this.btn_HuyThem.Text = "Hủy thêm";
+            this.btn_HuyThem.UseVisualStyleBackColor = true;
+            this.btn_HuyThem.Visible = false;
+            this.btn_HuyThem.Click += new System.EventHandler(this.btn_HuyThem_Click);
+            // 
             // id
             // 
+            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.id.DataPropertyName = "maphuthu";
             this.id.HeaderText = "id";
             this.id.Name = "id";
-            // 
-            // mahocsinh
-            // 
-            this.mahocsinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.mahocsinh.DataPropertyName = "mahocsinh";
-            this.mahocsinh.HeaderText = "Mã học sinh";
-            this.mahocsinh.Name = "mahocsinh";
+            this.id.Width = 54;
             // 
             // tenhocsinh
             // 
@@ -294,38 +302,25 @@
             // 
             // thanhtien
             // 
+            this.thanhtien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.thanhtien.DataPropertyName = "thanhtien";
             this.thanhtien.HeaderText = "Thành tiền";
             this.thanhtien.Name = "thanhtien";
+            this.thanhtien.Width = 121;
             // 
             // maloai
             // 
             this.maloai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.maloai.DataPropertyName = "maloai";
-            this.maloai.HeaderText = "Mã loại";
+            this.maloai.HeaderText = "Mã phụ thu";
             this.maloai.Name = "maloai";
             // 
             // nguoithu
             // 
             this.nguoithu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nguoithu.DataPropertyName = "nguoithu";
+            this.nguoithu.DataPropertyName = "nguoilapkhoanthu";
             this.nguoithu.HeaderText = "Người thu";
             this.nguoithu.Name = "nguoithu";
-            // 
-            // btn_HuyThem
-            // 
-            this.btn_HuyThem.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_HuyThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_HuyThem.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_HuyThem.Location = new System.Drawing.Point(908, 215);
-            this.btn_HuyThem.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_HuyThem.Name = "btn_HuyThem";
-            this.btn_HuyThem.Size = new System.Drawing.Size(220, 44);
-            this.btn_HuyThem.TabIndex = 36;
-            this.btn_HuyThem.Text = "Hủy thêm";
-            this.btn_HuyThem.UseVisualStyleBackColor = true;
-            this.btn_HuyThem.Visible = false;
-            this.btn_HuyThem.Click += new System.EventHandler(this.btn_HuyThem_Click);
             // 
             // PhuThu
             // 
@@ -339,7 +334,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PhuThu";
             this.Text = "PhuThu";
             this.Load += new System.EventHandler(this.PhuThu_Load);
@@ -365,13 +360,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbb_hs;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btn_HuyThem;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mahocsinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenhocsinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenphuthu;
         private System.Windows.Forms.DataGridViewTextBoxColumn thanhtien;
         private System.Windows.Forms.DataGridViewTextBoxColumn maloai;
         private System.Windows.Forms.DataGridViewTextBoxColumn nguoithu;
-        private System.Windows.Forms.Button btn_HuyThem;
     }
 }

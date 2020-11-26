@@ -46,18 +46,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.manguyenlieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tennguyenlieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ghichu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_HuyThem2 = new System.Windows.Forms.Button();
             this.btn_Xoa2 = new System.Windows.Forms.Button();
             this.guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.mahoclieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenhoclieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soluong1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ghichu2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_Sua2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_GhiChu2 = new System.Windows.Forms.TextBox();
@@ -66,6 +58,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txt_ten2 = new System.Windows.Forms.TextBox();
             this.btn_Them2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.manguyenlieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tennguyenlieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ghichu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mahoclieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenhoclieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soluong1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ghichu2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -88,7 +89,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(923, 318);
+            this.groupBox1.Size = new System.Drawing.Size(1145, 318);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nguyên liệu";
@@ -97,7 +98,7 @@
             // btn_HuyThem1
             // 
             this.btn_HuyThem1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_HuyThem1.Location = new System.Drawing.Point(746, 267);
+            this.btn_HuyThem1.Location = new System.Drawing.Point(968, 268);
             this.btn_HuyThem1.Name = "btn_HuyThem1";
             this.btn_HuyThem1.Size = new System.Drawing.Size(171, 45);
             this.btn_HuyThem1.TabIndex = 10;
@@ -108,7 +109,7 @@
             // btn_Xoa1
             // 
             this.btn_Xoa1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Xoa1.Location = new System.Drawing.Point(560, 267);
+            this.btn_Xoa1.Location = new System.Drawing.Point(782, 268);
             this.btn_Xoa1.Name = "btn_Xoa1";
             this.btn_Xoa1.Size = new System.Drawing.Size(171, 45);
             this.btn_Xoa1.TabIndex = 9;
@@ -119,7 +120,7 @@
             // btn_Sua1
             // 
             this.btn_Sua1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Sua1.Location = new System.Drawing.Point(746, 203);
+            this.btn_Sua1.Location = new System.Drawing.Point(968, 204);
             this.btn_Sua1.Name = "btn_Sua1";
             this.btn_Sua1.Size = new System.Drawing.Size(171, 45);
             this.btn_Sua1.TabIndex = 8;
@@ -129,7 +130,7 @@
             // 
             // txt_ghichu1
             // 
-            this.txt_ghichu1.Location = new System.Drawing.Point(711, 89);
+            this.txt_ghichu1.Location = new System.Drawing.Point(933, 90);
             this.txt_ghichu1.Multiline = true;
             this.txt_ghichu1.Name = "txt_ghichu1";
             this.txt_ghichu1.Size = new System.Drawing.Size(206, 89);
@@ -137,14 +138,14 @@
             // 
             // txt_soluong1
             // 
-            this.txt_soluong1.Location = new System.Drawing.Point(711, 54);
+            this.txt_soluong1.Location = new System.Drawing.Point(933, 55);
             this.txt_soluong1.Name = "txt_soluong1";
             this.txt_soluong1.Size = new System.Drawing.Size(206, 30);
             this.txt_soluong1.TabIndex = 6;
             // 
             // txt_ten1
             // 
-            this.txt_ten1.Location = new System.Drawing.Point(711, 18);
+            this.txt_ten1.Location = new System.Drawing.Point(933, 19);
             this.txt_ten1.Name = "txt_ten1";
             this.txt_ten1.Size = new System.Drawing.Size(206, 30);
             this.txt_ten1.TabIndex = 5;
@@ -152,7 +153,7 @@
             // btn_Them1
             // 
             this.btn_Them1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Them1.Location = new System.Drawing.Point(560, 203);
+            this.btn_Them1.Location = new System.Drawing.Point(782, 204);
             this.btn_Them1.Name = "btn_Them1";
             this.btn_Them1.Size = new System.Drawing.Size(171, 45);
             this.btn_Them1.TabIndex = 4;
@@ -163,7 +164,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(556, 92);
+            this.label3.Location = new System.Drawing.Point(778, 93);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 22);
             this.label3.TabIndex = 3;
@@ -172,7 +173,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(556, 59);
+            this.label2.Location = new System.Drawing.Point(778, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 22);
             this.label2.TabIndex = 2;
@@ -182,7 +183,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(556, 26);
+            this.label1.Location = new System.Drawing.Point(778, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 22);
             this.label1.TabIndex = 1;
@@ -226,7 +227,7 @@
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowTemplate.Height = 24;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(544, 291);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(766, 291);
             this.guna2DataGridView1.TabIndex = 0;
             this.guna2DataGridView1.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -252,32 +253,6 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.guna2DataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellClick);
             // 
-            // manguyenlieu
-            // 
-            this.manguyenlieu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.manguyenlieu.DataPropertyName = "manguyenlieu";
-            this.manguyenlieu.HeaderText = "Id";
-            this.manguyenlieu.Name = "manguyenlieu";
-            this.manguyenlieu.Width = 53;
-            // 
-            // tennguyenlieu
-            // 
-            this.tennguyenlieu.DataPropertyName = "tennguyenlieu";
-            this.tennguyenlieu.HeaderText = "Tên nguyên liệu";
-            this.tennguyenlieu.Name = "tennguyenlieu";
-            // 
-            // soluong
-            // 
-            this.soluong.DataPropertyName = "soluong";
-            this.soluong.HeaderText = "Số lượng";
-            this.soluong.Name = "soluong";
-            // 
-            // ghichu
-            // 
-            this.ghichu.DataPropertyName = "ghichu";
-            this.ghichu.HeaderText = "Ghi chú";
-            this.ghichu.Name = "ghichu";
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btn_HuyThem2);
@@ -292,9 +267,9 @@
             this.groupBox2.Controls.Add(this.txt_ten2);
             this.groupBox2.Controls.Add(this.btn_Them2);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(12, 406);
+            this.groupBox2.Location = new System.Drawing.Point(12, 336);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(923, 318);
+            this.groupBox2.Size = new System.Drawing.Size(1145, 318);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Học liệu";
@@ -302,7 +277,7 @@
             // btn_HuyThem2
             // 
             this.btn_HuyThem2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_HuyThem2.Location = new System.Drawing.Point(746, 267);
+            this.btn_HuyThem2.Location = new System.Drawing.Point(968, 266);
             this.btn_HuyThem2.Name = "btn_HuyThem2";
             this.btn_HuyThem2.Size = new System.Drawing.Size(171, 45);
             this.btn_HuyThem2.TabIndex = 20;
@@ -313,7 +288,7 @@
             // btn_Xoa2
             // 
             this.btn_Xoa2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Xoa2.Location = new System.Drawing.Point(560, 267);
+            this.btn_Xoa2.Location = new System.Drawing.Point(782, 266);
             this.btn_Xoa2.Name = "btn_Xoa2";
             this.btn_Xoa2.Size = new System.Drawing.Size(171, 45);
             this.btn_Xoa2.TabIndex = 19;
@@ -359,7 +334,7 @@
             this.guna2DataGridView2.RowHeadersVisible = false;
             this.guna2DataGridView2.RowTemplate.Height = 24;
             this.guna2DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView2.Size = new System.Drawing.Size(544, 291);
+            this.guna2DataGridView2.Size = new System.Drawing.Size(766, 291);
             this.guna2DataGridView2.TabIndex = 1;
             this.guna2DataGridView2.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -385,6 +360,113 @@
             this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.guna2DataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView2_CellClick);
             // 
+            // btn_Sua2
+            // 
+            this.btn_Sua2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Sua2.Location = new System.Drawing.Point(968, 202);
+            this.btn_Sua2.Name = "btn_Sua2";
+            this.btn_Sua2.Size = new System.Drawing.Size(171, 45);
+            this.btn_Sua2.TabIndex = 18;
+            this.btn_Sua2.Text = "Sửa";
+            this.btn_Sua2.UseVisualStyleBackColor = true;
+            this.btn_Sua2.Click += new System.EventHandler(this.btn_Sua2_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(778, 25);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(114, 22);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Tên học liệu:";
+            // 
+            // txt_GhiChu2
+            // 
+            this.txt_GhiChu2.Location = new System.Drawing.Point(933, 88);
+            this.txt_GhiChu2.Multiline = true;
+            this.txt_GhiChu2.Name = "txt_GhiChu2";
+            this.txt_GhiChu2.Size = new System.Drawing.Size(206, 89);
+            this.txt_GhiChu2.TabIndex = 17;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(778, 58);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(88, 22);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Số lượng:";
+            // 
+            // txt_SoLuong2
+            // 
+            this.txt_SoLuong2.Location = new System.Drawing.Point(933, 53);
+            this.txt_SoLuong2.Name = "txt_SoLuong2";
+            this.txt_SoLuong2.Size = new System.Drawing.Size(206, 30);
+            this.txt_SoLuong2.TabIndex = 16;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(778, 91);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 22);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Ghi chú:";
+            // 
+            // txt_ten2
+            // 
+            this.txt_ten2.Location = new System.Drawing.Point(933, 17);
+            this.txt_ten2.Name = "txt_ten2";
+            this.txt_ten2.Size = new System.Drawing.Size(206, 30);
+            this.txt_ten2.TabIndex = 15;
+            // 
+            // btn_Them2
+            // 
+            this.btn_Them2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Them2.Location = new System.Drawing.Point(782, 202);
+            this.btn_Them2.Name = "btn_Them2";
+            this.btn_Them2.Size = new System.Drawing.Size(171, 45);
+            this.btn_Them2.TabIndex = 14;
+            this.btn_Them2.Text = "Thêm";
+            this.btn_Them2.UseVisualStyleBackColor = true;
+            this.btn_Them2.Click += new System.EventHandler(this.btn_Them2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(856, 660);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(301, 45);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Lập phiếu bàn giao";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // manguyenlieu
+            // 
+            this.manguyenlieu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.manguyenlieu.DataPropertyName = "manguyenlieu";
+            this.manguyenlieu.HeaderText = "Id";
+            this.manguyenlieu.Name = "manguyenlieu";
+            this.manguyenlieu.Width = 53;
+            // 
+            // tennguyenlieu
+            // 
+            this.tennguyenlieu.DataPropertyName = "tennguyenlieu";
+            this.tennguyenlieu.HeaderText = "Tên nguyên liệu";
+            this.tennguyenlieu.Name = "tennguyenlieu";
+            // 
+            // soluong
+            // 
+            this.soluong.DataPropertyName = "soluongnguyenlieu";
+            this.soluong.HeaderText = "Số lượng";
+            this.soluong.Name = "soluong";
+            // 
+            // ghichu
+            // 
+            this.ghichu.DataPropertyName = "ghichu";
+            this.ghichu.HeaderText = "Ghi chú";
+            this.ghichu.Name = "ghichu";
+            // 
             // mahoclieu
             // 
             this.mahoclieu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -401,7 +483,7 @@
             // 
             // soluong1
             // 
-            this.soluong1.DataPropertyName = "soluong";
+            this.soluong1.DataPropertyName = "soluonghoclieu";
             this.soluong1.HeaderText = "Số lượng";
             this.soluong1.Name = "soluong1";
             // 
@@ -411,83 +493,13 @@
             this.ghichu2.HeaderText = "Ghi chú";
             this.ghichu2.Name = "ghichu2";
             // 
-            // btn_Sua2
-            // 
-            this.btn_Sua2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Sua2.Location = new System.Drawing.Point(746, 203);
-            this.btn_Sua2.Name = "btn_Sua2";
-            this.btn_Sua2.Size = new System.Drawing.Size(171, 45);
-            this.btn_Sua2.TabIndex = 18;
-            this.btn_Sua2.Text = "Sửa";
-            this.btn_Sua2.UseVisualStyleBackColor = true;
-            this.btn_Sua2.Click += new System.EventHandler(this.btn_Sua2_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(556, 26);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 22);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Tên học liệu:";
-            // 
-            // txt_GhiChu2
-            // 
-            this.txt_GhiChu2.Location = new System.Drawing.Point(711, 89);
-            this.txt_GhiChu2.Multiline = true;
-            this.txt_GhiChu2.Name = "txt_GhiChu2";
-            this.txt_GhiChu2.Size = new System.Drawing.Size(206, 89);
-            this.txt_GhiChu2.TabIndex = 17;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(556, 59);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 22);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Số lượng:";
-            // 
-            // txt_SoLuong2
-            // 
-            this.txt_SoLuong2.Location = new System.Drawing.Point(711, 54);
-            this.txt_SoLuong2.Name = "txt_SoLuong2";
-            this.txt_SoLuong2.Size = new System.Drawing.Size(206, 30);
-            this.txt_SoLuong2.TabIndex = 16;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(556, 92);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 22);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Ghi chú:";
-            // 
-            // txt_ten2
-            // 
-            this.txt_ten2.Location = new System.Drawing.Point(711, 18);
-            this.txt_ten2.Name = "txt_ten2";
-            this.txt_ten2.Size = new System.Drawing.Size(206, 30);
-            this.txt_ten2.TabIndex = 15;
-            // 
-            // btn_Them2
-            // 
-            this.btn_Them2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Them2.Location = new System.Drawing.Point(560, 203);
-            this.btn_Them2.Name = "btn_Them2";
-            this.btn_Them2.Size = new System.Drawing.Size(171, 45);
-            this.btn_Them2.TabIndex = 14;
-            this.btn_Them2.Text = "Thêm";
-            this.btn_Them2.UseVisualStyleBackColor = true;
-            this.btn_Them2.Click += new System.EventHandler(this.btn_Them2_Click);
-            // 
             // Kho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1169, 736);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Kho";
@@ -519,16 +531,8 @@
         private System.Windows.Forms.TextBox txt_ten1;
         private System.Windows.Forms.Button btn_Them1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn manguyenlieu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tennguyenlieu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn soluong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ghichu;
         private System.Windows.Forms.Button btn_HuyThem2;
         private System.Windows.Forms.Button btn_Xoa2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mahoclieu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenhoclieu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn soluong1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ghichu2;
         private System.Windows.Forms.Button btn_Sua2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_GhiChu2;
@@ -537,5 +541,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_ten2;
         private System.Windows.Forms.Button btn_Them2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn manguyenlieu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tennguyenlieu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soluong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ghichu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mahoclieu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenhoclieu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soluong1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ghichu2;
     }
 }
